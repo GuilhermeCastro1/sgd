@@ -13564,3 +13564,12 @@ input[type=number] {
 
 
 /* IMAGE LOGO */
+
+
+/*Input File user*/
+
+.custom-file-label {
+    margin-top: 30px;
+    text-align: left;
+    font-size: small;
+}
