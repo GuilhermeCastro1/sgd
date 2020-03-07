@@ -75,213 +75,229 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                   <div class="row m-t-30" style="margin-top: 10px;">
                       <div class="col-md-12">
                           <!-- DATA TABLE-->
-                          <div class="table-responsive m-b-40">
-                                    
-            <!-- Content -->
-                <!-- MAIN CONTENT-->
-                <div class="main-content" style="padding-top: 10px;">
-                    <div class="section__content section__content--p30">
-                        <div class="container-fluid">
-                            <div class="row">
-                  
-                                <div class="col-lg-12" style=" margin: auto;">
-                      
-                                <div class="div-cad-acesso">
-                                  <div class="form-part form-part-button-form" style="padding-top: 10px">
-                                    
-                                    <button type="button" class="btn btn-primary" onclick="window.open('resumos.php', '_self')"><<<</button>
-                                    </button>
-                                    
-                                    <div class="div-cad-acesso-int">
-                                    
-                                   <!-- /# column -->
-                                    <div class="col-lg-11">
-                                       
-                                            
-                                            <div style="margin: auto; padding-left: 35px; padding-right: 35px">
+                            <div class="table-responsive m-b-40">
 
-                                                    <!-- RESUMOS -->
-                                                        <div class="tab-pane fade show active">
-                                                     <p>
-                                                    <!-- Form -->
-                                                        <form action="../controller/ResumoController.class.php" method="get">
-
-                                                        <div class="row" style="margin-bottom: 7px">
-                                                            
-                                                            <div class="col-md-12" style="background-color: #E9ECEF">
+                                
+                                <!-- Jumbotron --><div class="jumbotron" style="padding:5px">
+                                        
+                                    <!-- Content -->
+                                    <!-- MAIN CONTENT-->
+                                    <div class="main-content" style="padding-top: 10px;">
+                                        <div class="section__content section__content--p30">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                    
+                                                    <div class="col-lg-12" style=" margin: auto;">
+                                        
+                                                    <div class="div-cad-acesso">
+                                                    <div class="form-part form-part-button-form" style="padding-top: 10px">
+                                                        
+                                                        <button type="button" class="btn btn-primary" onclick="window.open('resumos.php', '_self')"><<<</button>
+                                                        </button>
+                                                        
+                                                        <div class="div-cad-acesso-int">
+                                                        
+                                                    <!-- /# column -->
+                                                        <div class="col-lg-11">
+                                                        
                                                                 
-                                                                <!-- DATA
-                                                                <div class="col-md-3" style="float: right">
-                                                                <?php
-                                                                    date_default_timezone_set('America/Sao_Paulo');
-                                                                    $data = date("d/m/Y", time());
-                                                                ?>
-                                                                <input type="datetime" id="data" name="data" class="form-control form-control-sm input-format-center" 
-                                                                value="<?php
-                                                                            if (isset($rsm['data'])) {
-                                                                                $dt = array_reverse(explode('-', $rsm['data']));
-                                                                                $dt = implode('/', $dt);
-                                                                                echo $dt;
-                                                                            } else {
-                                                                                echo $data;
-                                                                            }
-                                                                        ?>" style="font-weight: bold; font-size: 14px; border: 0px" readonly>
+                                                                <div style="margin: auto; padding-left: 35px; padding-right: 35px">
+
+                                                                        <!-- PROFILE -->
+                                                                            <div class="tab-pane fade show active">
+                                                                        <p>
+                                                                        <!-- Form -->
+                                                                            <form action="../controller/ResumoController.class.php" method="get">
+
+                                                                            <div class="row" style="margin-bottom: 7px">
+                                                                                
+                                                                                <div class="col-md-12" style="background-color: #E9ECEF">
+                                                                                    
+                                                                                    <!-- DATA
+                                                                                    <div class="col-md-3" style="float: right">
+                                                                                    <?php
+                                                                                        date_default_timezone_set('America/Sao_Paulo');
+                                                                                        $data = date("d/m/Y", time());
+                                                                                    ?>
+                                                                                    <input type="datetime" id="data" name="data" class="form-control form-control-sm input-format-center" 
+                                                                                    value="<?php
+                                                                                                if (isset($rsm['data'])) {
+                                                                                                    $dt = array_reverse(explode('-', $rsm['data']));
+                                                                                                    $dt = implode('/', $dt);
+                                                                                                    echo $dt;
+                                                                                                } else {
+                                                                                                    echo $data;
+                                                                                                }
+                                                                                            ?>" style="font-weight: bold; font-size: 14px; border: 0px" readonly>
+                                                                                    </div>
+                                                                                
+                                                                                    END DATA -->
+
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <br>
+
+                                                                            <div class="container bootstrap snippet">
+                                                                                <div class="row">
+                                                                                    
+                                                                                </div>
+                                                                                <div class="row">
+
+                                                                                    <div class="col-sm-3"><!--left col-->
+                                                                                        
+
+                                                                                            <div class="text-center">
+                                                                                                <div class="row">
+                                                                                                    <div class="col">
+                                                                                                        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"  style="width:300px">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col">
+                                                                                                        <br>
+                                                                                                        <input type="file" class="custom-file-input text-right center-block file-upload" id="customFile">
+                                                                                                        <label class="custom-file-label" for="customFile">Alterar a foto</label>        
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            
+                                                                                            <br>
+
+                                                                                            
+                                                                                            <div class="panel panel-default">
+                                                                                                    
+                                                                                            </div>
+                                                                                                
+                                                                                    </div><!--/col-3-->
+
+
+                                                                                    <div class="col-sm-9">
+                                                                                        
+                                                                                    <div class="tab-content">
+                                                                                        <div class="tab-pane active" id="home">
+                                                                                            <hr>
+                                                                                            <form class="form" action="##" method="post" id="registrationForm">
+                                                                                                <div class="form-group">
+                                                                                                    
+                                                                                                    <div class="col-xs-6">
+                                                                                                        <label for="first_name"><h4>First name</h4></label>
+                                                                                                        <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="form-group">
+                                                                                                    
+                                                                                                    <div class="col-xs-6">
+                                                                                                        <label for="last_name"><h4>Last name</h4></label>
+                                                                                                        <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                    
+                                                                                                <div class="form-group">
+                                                                                                    
+                                                                                                    <div class="col-xs-6">
+                                                                                                        <label for="phone"><h4>Phone</h4></label>
+                                                                                                        <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                    
+                                                                                                <div class="form-group">
+                                                                                                    <div class="col-xs-6">
+                                                                                                        <label for="mobile"><h4>Mobile</h4></label>
+                                                                                                        <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="form-group">
+                                                                                                    
+                                                                                                    <div class="col-xs-6">
+                                                                                                        <label for="email"><h4>Email</h4></label>
+                                                                                                        <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="form-group">
+                                                                                                    
+                                                                                                    <div class="col-xs-6">
+                                                                                                        <label for="email"><h4>Location</h4></label>
+                                                                                                        <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="form-group">
+                                                                                                    
+                                                                                                    <div class="col-xs-6">
+                                                                                                        <label for="password"><h4>Password</h4></label>
+                                                                                                        <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="form-group">
+                                                                                                    
+                                                                                                    <div class="col-xs-6">
+                                                                                                        <label for="password2"><h4>Verify</h4></label>
+                                                                                                        <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="form-group">
+                                                                                                    <div class="col-xs-12">
+                                                                                                            <br>
+                                                                                                            <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                                                                                                            <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                            </form>
+                                                                                        
+                                                                                        <hr>
+                                                                                        
+                                                                                        </div><!--/tab-pane-->
+                                                                                        
+                                                                                    </div><!--/tab-content-->
+
+                                                                                    </div><!--/col-9-->
+                                                                                </div><!--/row-->
+                                                                        
+                                                                            
+                                                                            <!-- END PROFILE -->
+                                                                            
+                                                                            
+                                                                            <?= !isset($id) ? "<input type='hidden' name='acao' value='cadastrar'>" : "<input type='hidden' name='acao' value='editar'> <input type='hidden' name='id' value='$id'>" ?>
+                                                                            
+                                                                            <!-- BUTTON SUBMIT -->
+                                                                            <hr>
+                                                                            <div class="row">
+                                                                                <div class="form-part form-part-button-form" style="padding-bottom: 40px; clear:both; width: 100%;">
+                                                                                    <button type="submit" class="btn btn-success" id="sbmt" onclick="myFunction()">
+                                                                                        <?= !isset($id) ? "Salvar" : "Editar" ?>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- END BUTTON SUBMIT -->
+
+                                                                            </form>
+                                                                            <!-- End Form -->
+                                                                        </<span>
+                                                                    </div>
+                                                                    <!--END CHECKLIST -->
                                                                 </div>
-                                                            
-                                                                END DATA -->
-
+                                                                
                                                             </div>
-                                                        </div>
-
-                                                        <br>
-
-<div class="container bootstrap snippet">
-    <div class="row">
-    	
-    </div>
-    <div class="row">
-
-  		<div class="col-sm-3"><!--left col-->
-              
-
-                <div class="text-center">
-                    <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
-                    <br>
-                    <input type="file" class="text-center center-block file-upload">
-                </div>
-                </hr>
-                <br>
-      
-                <div class="panel panel-default">
-                        
-                </div>
-                      
-        </div><!--/col-3-->
-
-
-    	<div class="col-sm-9">
-              
-          <div class="tab-content">
-            <div class="tab-pane active" id="home">
-                <hr>
-                  <form class="form" action="##" method="post" id="registrationForm">
-                      <div class="form-group">
-                          
-                          <div class="col-xs-6">
-                              <label for="first_name"><h4>First name</h4></label>
-                              <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          
-                          <div class="col-xs-6">
-                            <label for="last_name"><h4>Last name</h4></label>
-                              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
-                          </div>
-                      </div>
-          
-                      <div class="form-group">
-                          
-                          <div class="col-xs-6">
-                              <label for="phone"><h4>Phone</h4></label>
-                              <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
-                          </div>
-                      </div>
-          
-                      <div class="form-group">
-                          <div class="col-xs-6">
-                             <label for="mobile"><h4>Mobile</h4></label>
-                              <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          
-                          <div class="col-xs-6">
-                              <label for="email"><h4>Email</h4></label>
-                              <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          
-                          <div class="col-xs-6">
-                              <label for="email"><h4>Location</h4></label>
-                              <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          
-                          <div class="col-xs-6">
-                              <label for="password"><h4>Password</h4></label>
-                              <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          
-                          <div class="col-xs-6">
-                            <label for="password2"><h4>Verify</h4></label>
-                              <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                           <div class="col-xs-12">
-                                <br>
-                              	<button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
-                               	<button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
-                            </div>
-                      </div>
-              	</form>
-              
-              <hr>
-              
-             </div><!--/tab-pane-->
-            
-          </div><!--/tab-content-->
-
-        </div><!--/col-9-->
-    </div><!--/row-->
-                                                      
                                                         
-                                                        <!-- END RESUMO DIÁRIO DE TURNO -->
-                                                        
-                                                        
-                                                        <?= !isset($id) ? "<input type='hidden' name='acao' value='cadastrar'>" : "<input type='hidden' name='acao' value='editar'> <input type='hidden' name='id' value='$id'>" ?>
-                                                        
-                                                        <!-- BUTTON SUBMIT -->
-                                                        <hr>
-                                                        <div class="row">
-                                                            <div class="form-part form-part-button-form" style="padding-bottom: 40px; clear:both; width: 100%;">
-                                                                <button type="submit" class="btn btn-success" id="sbmt" onclick="myFunction()">
-                                                                    <?= !isset($id) ? "Salvar" : "Editar" ?>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                        <!-- END BUTTON SUBMIT -->
+                                                    <!-- /# column -->
 
-                                                        </form>
-                                                        <!-- End Form -->
-                                                      </<span>
+                                                    </div>
+
                                                 </div>
-                                                <!--END CHECKLIST -->
                                             </div>
-                                            
-                                        </div>
-                                    
-                                <!-- /# column -->
 
-                                  </div>
+                                            </div>
+                                                
+                                        </div>
+
+                                        </div>
+                                            
+                                    </div>
+                                </div>
+
+                                <!-- Jumbotron --></div>
 
                             </div>
-                          </div>
-
-                        </div>
-                            
-                       </div>
-
-                     </div>
-                        
-                 </div>
-              </div>
-            </div>
         </div>
             <script type="text/javascript">
                 $('#sbmt').click(function() { 
@@ -309,7 +325,14 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                     readURL(this);
                 });
                 });
-        
+                
+            </script>
+            <script>
+                // Add the following code if you want the name of the file appear on select
+                $(".custom-file-input").on("change", function() {
+                var fileName = $(this).val().split("\\").pop();
+                $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+                });
             </script>
      
     </div>
