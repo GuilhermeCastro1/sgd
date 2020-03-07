@@ -156,8 +156,8 @@
                                             </div>
                                             <div class="account-dropdown__body">
                                                 <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                                    <a href="profile.php">
+                                                        <i class="zmdi zmdi-account"></i>Perfil do usuário</a>
                                                 </div>
                                                 <!--
                                                 <div class="account-dropdown__item">
