@@ -36,6 +36,7 @@
 
     <!-- Main CSS-->
     <link href="../assets/css/theme.css" rel="stylesheet" media="all">
+    <link href="../assets/css/style.css" rel="stylesheet" media="all">
 
     <!-- JQuery -->
     <script type="text/javascript" src="../assets/vendor/jquery-3.3.1.js"></script>

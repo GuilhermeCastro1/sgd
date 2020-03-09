@@ -176,10 +176,10 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                                         
                                                                                     <div class="tab-content">
                                                                                         <div class="tab-pane active" id="home">
-                                                                                            <hr>
+                                                                                            
                                                                                             <form class="form" action="##" method="post" id="registrationForm">
                                                                                                 
-                                                                                                <div class="row">
+                                                                                                <div class="row row_form_user">
                                                                                                     
                                                                                                     <div class="col-md-5" style="float: left">
                                                                                                         <label for="first_name"><h5>Nome</h5></label>
@@ -193,7 +193,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
                                                                                                 </div>
                                                                                                 
-                                                                                                <div class="row">
+                                                                                                <div class="row row_form_user">
                                                                                                 <div class="col-md-4" style="float: right">
                                                                                                         <label for="last_name"><h5>Nascimento</h5></label>
                                                                                                         <input type="date" class="form-control form-control-sm" name="dt_nasc" id="dt_nasc" placeholder="Nascimento" title="enter your last name if any.">
@@ -209,11 +209,11 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
                                                                                                 </div>
 
-                                                                                                <div class="form-group">
+                                                                                                <div class="row">
                                                                                                     
-                                                                                                    <div class="col-xs-6">
-                                                                                                        <label for="phone"><h4>Telefone</h4></label>
-                                                                                                        <input type="tel" class="form-control" name="phone" id="phone" placeholder="(XX) XXXXX-XXXX" pattern="([0-9]{2})-[9]{1}[0-9]{4}-[0-9]{4}" required>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <label for="phone"><h5>Telefone</h5></label>
+                                                                                                        <input type="tel" class="form-control form-control-sm" name="phone" id="phone" placeholder="(XX) XXXXX-XXXX" pattern="([0-9]{2})-[9]{1}[0-9]{4}-[0-9]{4}" required>
                                                                                                         
                                                                                                     </div>
                                                                                                 </div>

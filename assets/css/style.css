@@ -1,32 +1,3 @@
-/* BASIC */
-
-html {
-    background-color: #56baed;
-}
-
-body {
-    font-family: "Poppins", sans-serif;
-    height: 100vh;
-}
-
-a {
-    color: #92badd;
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 400;
-}
-
-h2 {
-    text-align: center;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    display: inline-block;
-    margin: 40px 8px 10px 8px;
-    color: #cccccc;
-}
-
-
 /* STRUCTURE */
 
 .wrapper {
@@ -117,17 +88,14 @@ input[type=reset]:active {
     transform: scale(0.95);
 }
 
-input[type=text] {
+#search {
     background-color: #f6f6f6;
     border: none;
     color: #0d0d0d;
-    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 5px;
-    width: 85%;
+    width: 95%;
     border: 2px solid #f6f6f6;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -138,16 +106,16 @@ input[type=text] {
     border-radius: 5px 5px 5px 5px;
 }
 
-input[type=text]:focus {
+#search:focus {
     background-color: #fff;
     border-bottom: 2px solid #5fbae9;
 }
 
-input[type=text]:placeholder {
+#search:placeholder {
     color: #cccccc;
 }
 
-input[type=password] {
+#login {
     background-color: #f6f6f6;
     border: none;
     color: #0d0d0d;
@@ -168,12 +136,42 @@ input[type=password] {
     border-radius: 5px 5px 5px 5px;
 }
 
-input[type=password]:focus {
+#login:focus {
     background-color: #fff;
     border-bottom: 2px solid #5fbae9;
 }
 
-input[type=password]:placeholder {
+#login:placeholder {
+    color: #cccccc;
+}
+
+#password {
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    width: 85%;
+    border: 2px solid #f6f6f6;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#password:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #5fbae9;
+}
+
+#password:placeholder {
     color: #cccccc;
 }
 
@@ -319,10 +317,19 @@ input[type=password]:placeholder {
     outline: none;
 }
 
-#icon {
+#logoLogin {
     width: 64%;
 }
 
-img {
+.imglogin {
     margin: 30px;
+}
+
+.tab-content {
+    padding-left: 25px;
+}
+
+.row_form_user {
+    margin-top: 8px;
+    margin-bottom: 15px;
 }
