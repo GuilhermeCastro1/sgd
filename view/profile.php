@@ -8,8 +8,11 @@ if (!$_SESSION['logon']){
     header("Location: login.php");
 }
 
+$id = $_SESSION['id'];
 $userC = new UsuarioController();
+$user = $userC->listaUsuario($id);
 
+//var_dump($user['dt_nasc']); die();
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
       $id = $_GET['id'];
@@ -64,7 +67,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                         <div class="row">
                             <div class="col-md-12" style="line-height:35px; margin-top:30px">
                                 <div style="float: left;">
-                                    <?= !isset($id) ? "Registrar Resumo" : "Editar Resumo" ?>
+                                    Perfil do Usuário
                                 </div>
                                 <!-- <div style="float: right;">
                                     <button class="btn btn-success" onclick="window.open('cad_acesso.php', '_self')"> <i class="fa fa-plus"></i> Acesso</button>
@@ -97,10 +100,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                         
                                                         <div class="div-cad-acesso-int">
                                                         
-                                                    <!-- /# column -->
+                                                        <!-- /# column -->
                                                         <div class="col-lg-11">
-                                                        
-                                                                
+
                                                                 <div style="margin: auto; padding-left: 35px; padding-right: 35px">
 
                                                                         <!-- PROFILE -->
@@ -172,83 +174,83 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                                     </div><!--/col-3-->
 
 
-                                                                                    <div class="col-sm-9">
+                                                                                    <div class="col-sm-9"><!--right col-->
                                                                                         
                                                                                     <div class="tab-content">
                                                                                         <div class="tab-pane active" id="home">
-                                                                                            
-                                                                                            <form class="form" action="##" method="post" id="registrationForm">
                                                                                                 
                                                                                                 <div class="row row_form_user">
                                                                                                     
                                                                                                     <div class="col-md-5" style="float: left">
-                                                                                                        <label for="first_name"><h5>Nome</h5></label>
-                                                                                                        <input type="text" class="form-control form-control-sm" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+                                                                                                        <label for="nome"><h6>Nome</h6></label>
+                                                                                                        <input type="text" class="form-control form-control-sm" name="nome" id="nome" value="<?= isset($user['nome']) ? $user['nome'] : '' ?>" required>
                                                                                                     </div>
 
                                                                                                     <div class="col-md-7" style="float: right">
-                                                                                                        <label for="last_name"><h5>Sobrenome</h5></label>
-                                                                                                        <input type="text" class="form-control form-control-sm" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
+                                                                                                        <label for="sobrenome"><h6>Sobrenome</h6></label>
+                                                                                                        <input type="text" class="form-control form-control-sm" name="sobrenome" id="sobrenome" value="<?= isset($user['sobrenome']) ? $user['sobrenome'] : '' ?>">
                                                                                                     </div>
 
                                                                                                 </div>
                                                                                                 
                                                                                                 <div class="row row_form_user">
-                                                                                                <div class="col-md-4" style="float: right">
-                                                                                                        <label for="last_name"><h5>Nascimento</h5></label>
-                                                                                                        <input type="date" class="form-control form-control-sm" name="dt_nasc" id="dt_nasc" placeholder="Nascimento" title="enter your last name if any.">
+                                                                                                    <div class="col-md-4" style="float: left">
+                                                                                                        <label for="dt_nasc"><h6>Data de nascimento</h6></label>
+                                                                                                        <input type="date" class="form-control form-control-sm" name="dt_nasc" id="dt_nasc" value="<?= isset($user['dt_nasc']) ? $user['dt_nasc'] : '' ?>" required>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-8" style="float: right">
+                                                                                                        <label for="func"><h6>Função</h6></label>
+                                                                                                        <input type="text" class="form-control form-control-sm" name="func" id="func" value="<?= isset($user['func']) ? $user['func'] : '' ?>" required>
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 
-                                                                                                <div class="row">
-                                                                                                    
-                                                                                                    <div class="col-md-12">
-                                                                                                        <label for="email"><h5>Email</h5></label>
-                                                                                                        <input type="email" class="form-control form-control-sm" name="email" id="email" placeholder="you@email.com" title="enter your email.">
-                                                                                                    </div>
-
-                                                                                                </div>
-
-                                                                                                <div class="row">
-                                                                                                    
-                                                                                                    <div class="col-md-6">
-                                                                                                        <label for="phone"><h5>Telefone</h5></label>
-                                                                                                        <input type="tel" class="form-control form-control-sm" name="phone" id="phone" placeholder="(XX) XXXXX-XXXX" pattern="([0-9]{2})-[9]{1}[0-9]{4}-[0-9]{4}" required>
+                                                                                                <div class="row row_form_user">
+                                                                                                    <div class="col-md-4" style="float: left">
+                                                                                                        <label for="telefone"><h6>Telefone</h6></label>
+                                                                                                        <input type="tel" class="form-control form-control-sm" name="telefone" id="telefone" placeholder="(XX) XXXXX-XXXX" pattern="([0-9]{2})-[9]{1}[0-9]{4}-[0-9]{4}" value="<?= isset($user['telefone']) ? $user['telefone'] : '' ?>" required>
                                                                                                         
                                                                                                     </div>
-                                                                                                </div>
-                                                                                    
-                                                                                                <div class="form-group">
-                                                                                                    <div class="col-xs-6">
-                                                                                                        <label for="mobile"><h4>Mobile</h4></label>
-                                                                                                        <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
+                                                                                                    <div class="col-md-8" style="float: right">
+                                                                                                        <label for="email"><h6>Email</h6></label>
+                                                                                                        <input type="email" class="form-control form-control-sm" name="email" id="email" placeholder="you@email.com" title="seu email aqui!" value="<?= isset($user['email']) ? $user['email'] : '' ?>" required>
                                                                                                     </div>
+
+                                                                                                </div>
+                                                                                                <br>
+                                                                                                <hr>
+
+                                                                                                <div class="row row_form_user">
+                                                                                                    <div class="col-md-3" style="float: left">
+                                                                                                        <label for="id"><h6>ID</h6></label>
+                                                                                                        <input type="number" class="form-control form-control-sm" name="id" id="id" value="<?= isset($user['id']) ? $user['id'] : '' ?>">
+                                                                                                        
+                                                                                                    </div>
+                                                                                                    <div class="col-md-9" style="float: right">
+                                                                                                        <label for="usuario"><h6>Usuário</h6></label>
+                                                                                                        <input type="text" class="form-control form-control-sm" name="usuario" id="usuario" placeholder="usuario" title="" value="<?= isset($user['usuario']) ? $user['usuario'] : '' ?>" required>
+                                                                                                    </div>
+
+                                                                                                </div>
+
+                                                                                                <br>
+                                                                                                <label for="senha"><h6>Senha</h6></label>
+                                                                                                <br>
+                                                                                                <div class="row row_form_user">
+                                                                                                    <div class="col-md-6" style="float: left">
+                                                                                                        
+                                                                                                        <input type="password" class="form-control form-control-sm pass" name="senha" id="senha" placeholder="*senha" title="*senha*">
+                                                                                                        
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6" style="float: right">
+                                                                                                        
+                                                                                                        <input type="password" class="form-control form-control-sm pass" name="conf_senha" id="conf_senha" placeholder="*repita a senha" title="*confirme a senha*" required>
+                                                                                                    </div>
+
                                                                                                 </div>
                                                                                                 
-                                                                                                <div class="form-group">
-                                                                                                    
-                                                                                                    <div class="col-xs-6">
-                                                                                                        <label for="email"><h4>Location</h4></label>
-                                                                                                        <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="form-group">
-                                                                                                    
-                                                                                                    <div class="col-xs-6">
-                                                                                                        <label for="password"><h4>Password</h4></label>
-                                                                                                        <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="form-group">
-                                                                                                    
-                                                                                                    <div class="col-xs-6">
-                                                                                                        <label for="password2"><h4>Verify</h4></label>
-                                                                                                        <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </form>
-                                                                                        
-                                                                                        <hr>
+                                                                                                <br>
+                                                                                                <hr>
+                                                                                                <br>
                                                                                         
                                                                                         </div><!--/tab-pane-->
                                                                                         
@@ -256,7 +258,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
                                                                                     </div><!--/col-9-->
                                                                                 </div><!--/row-->
-                                                                        
+                                                                            </div>
                                                                             
                                                                             <!-- END PROFILE -->
                                                                             

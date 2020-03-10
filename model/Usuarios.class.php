@@ -24,9 +24,6 @@ class Usuarios{
 		return $this->id;
 	}
 
-	public function getUsuario(){
-		return $this->usuario;
-	}
 	public function setUsuario($usuario){
 		$this->usuario = $usuario;
 	}
@@ -75,12 +72,29 @@ class Usuarios{
 
 		return $array;
 	}
+	
+	public function getUsuario($i){
+		//$sql = "SELECT * FROM usuarios WHERE id = $i and status != 'inativo'";
+		$sql = "SELECT * FROM usuarios WHERE id = $i";
+		$sql = $this->pdo->prepare($sql);
+		$sql->execute();
+
+		$array = array();
+
+		if($sql->rowCount() > 0){
+			$array = $sql->fetch();
+
+			return $array;
+		}
+
+		return $array;
+	}
 
 	public function validaLogin($a, $b){
 		$array = array();
 		$user = $a;
 		$pass = $b;
-		$sql = "SELECT * FROM usuarios WHERE usuario = :user AND senha = :pass AND status != 'inativo'";
+		$sql = "SELECT * FROM usuarios WHERE usuario = :user AND senha = :pass AND status != 0";
 		$sql = $this->pdo->prepare($sql);
 		$sql->bindValue(":user", $user);
 		$sql->bindValue(":pass", $pass);
@@ -91,7 +105,8 @@ class Usuarios{
 			session_start();
 			$_SESSION['logon'] = $array['apelido'];
 			$_SESSION['logon_email'] = $array['email'];
-			$_SESSION['logon_nome'] = $array['nome_completo'];
+			$_SESSION['logon_nome'] = $array['nome'];
+			$_SESSION['id'] = $array['id'];
 			return true;
 		}else{
 			return false;
