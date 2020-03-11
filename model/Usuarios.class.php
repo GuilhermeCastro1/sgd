@@ -4,11 +4,15 @@ class Usuarios{
 
 	private $pdo;
 	private $id;
+	private $nome;
+	private $sobrenome;
+	private $dt_nasc;
+	private $func;
+	private $telefone;
+	private $email;
 	private $usuario;
 	private $senha;
-	private $email;
-	private $apelido;
-	private $nome;
+	private $c_foto;
 
 	public function __construct($pdo, $id = '', $usuario = '', $senha = '', $email = '', $apelido = '',  $nome = ''){
 		$this->pdo = $pdo;
@@ -136,6 +140,27 @@ class Usuarios{
 		}
 
 		return $apelido;
+	}
+
+	public function edit($id, $nome, $sobrenome, $dt_nasc, $func, $telefone, $email, $usuario, $senha, $c_foto){
+
+		$this->id 			= $id;
+		$this->nome 		= $nome;
+		$this->sobrenome 	= $sobrenome;
+		$this->dt_nasc 		= $dt_nasc;
+		$this->func 		= $func;
+		$this->telefone 	= $telefone;
+		$this->email  		= $email;
+		$this->usuario  	= $usuario;
+		$this->senha 		= $senha;
+		$this->c_foto 		= $c_foto;
+
+		$sql = "UPDATE usuarios SET nome = '$this->nome', sobrenome = '$this->sobrenome', dt_nasc = '$this->dt_nasc', func = '$this->func', telefone = '$this->telefone', email = '$this->email', usuario = '$this->usuario', senha = '$this->senha', c_foto = '$this->c_foto' WHERE id = '$this->id'";
+
+		$sql = $this->pdo->prepare($sql);
+		$sql->execute();
+
+		return true;
 	}
 }
 

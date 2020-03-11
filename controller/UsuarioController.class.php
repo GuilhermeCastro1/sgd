@@ -2,14 +2,35 @@
 
 require '../autoload.php';
 
-if (isset($_GET['acao']) && $_GET['acao'] == 'deslogar') {
-	$userController = new UsuarioController();
-	$userController->deslogar();
+if (isset($_GET['acao']) && !empty($_GET['acao'])) {
+	$acao = $_GET['acao'];
+	$uC = new UsuarioController();
+}
+
+switch($acao){
+	case 'deslogar':
+		$uC->deslogar();
+	break;
+	case 'editar':
+		$uC->editarUsuario($id, $nome, $sobrenome, $dt_nasc, $func, $telefone, $email, $usuario, $senha, $c_foto);
+	break;
+	default:
+	break;
 }
 
 class UsuarioController{
 	private $pdo;
 	private $user;
+	private $id;
+	private $nome;
+	private $sobrenome;
+	private $dt_nasc;
+	private $func;
+	private $telefone;
+	private $email;
+	private $usuario;
+	private $senha;
+	private $c_foto;
 
 	public function __construct(){
 
@@ -18,10 +39,10 @@ class UsuarioController{
 	}
 	public function logar($u, $s){
 
-		$usuario = $u;
-		$senha = $s;
+		$this->usuario = $u;
+		$this->senha = $s;
 
-		if($this->user->validaLogin($usuario, $senha)){
+		if($this->user->validaLogin($this->usuario, $this->senha)){
 			  //header("Location:../view/dashboard.php");
 			  header("Location:../view/acessos.php");
     	}else{
@@ -36,20 +57,42 @@ class UsuarioController{
 		exit;
 
 	}
+	public function editarUsuario($id, $nome, $sobrenome, $dt_nasc, $func, $telefone, $email, $usuario, $senha, $c_foto){
+		
+		$this->id = $id;
+		$this->nome = $nome; 
+		$this->sobrenome = $sobrenome;
+		$this->dt_nasc = $dt_nasc;
+		$this->func = $func;
+		$this->telefone = $telefone;
+		$this->email = $email;
+		$this->usuario = $usuario;
+		$this->senha = $senha;
+		$this->c_foto = $c_foto;
+
+		$pdo = new Conexao();
+		
+		$user = new Usuarios($pdo);
+		$user->edit($this->id, $this->nome, $this->sobrenome, $this->dt_nasc, $this->func, $this->telefone, $this->email, $this->usuario, $this->senha, $this->c_foto);
+
+		return true;
+
+	}
+
+
+
 	public function retornaId(){
 		$this->user->getId();
 	}
-	public function listaUsuarios($pSt){
-		$pStatus = $pSt;
+	public function listaUsuarios($pStatus){
 		return $this->user->getUsuarios($pStatus);
 	}
-	public function listaUsuario($i){
-		return $this->user->getUsuario($i);
+	public function listaUsuario($id){
+		return $this->user->getUsuario($id);
 	}
 
 	public function retornaApelido($id){
-		$i = $id;
-		return $this->user->returnApelido($i);
+		return $this->user->returnApelido($id);
 	}
 }
 

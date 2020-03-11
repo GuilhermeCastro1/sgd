@@ -109,7 +109,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                             <div class="tab-pane fade show active">
                                                                         <p>
                                                                         <!-- Form -->
-                                                                            <form action="../controller/ResumoController.class.php" method="get">
+                                                                            <form action="../controller/UsuarioController.class.php" method="get">
 
                                                                             <div class="row" style="margin-bottom: 7px">
                                                                                 
@@ -152,7 +152,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                                             <div class="text-center">
                                                                                                 <div class="row">
                                                                                                     <div class="col">
-                                                                                                        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"  style="width:300px">
+                                                                                                    
+                                                                                                        <!-- <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"  style="width:300px"> -->
+                                                                                                        <img id="avatar" src="<?= $user['c_foto'] ? '../assets/images/users/'.$user['c_foto'] : 'http://ssl.gstatic.com/accounts/ui/avatar_2x.png'; ?>" class="avatar img-circle img-thumbnail" alt="avatar"  style="width:300px">
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <div class="row">
