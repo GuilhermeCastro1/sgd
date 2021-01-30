@@ -5,6 +5,8 @@ require '../autoload.php';
 if (isset($_GET['acao']) && !empty($_GET['acao'])) {
 	$acao = $_GET['acao'];
 	$uC = new UsuarioController();
+}else{
+	$acao = "";
 }
 
 switch($acao){

@@ -7,9 +7,9 @@ class Conexao extends PDO{
 	public function __construct(){
 		
 		try{
-			parent::__construct("mysql:dbname=bd_npo;host=localhost; charset=utf8", "root", "root");
+			parent::__construct("mysql:dbname=bd_npo;host=localhost; charset=utf8", "root", "");
 
-			$this->pdo = new PDO("mysql:dbname=bd_npo;host=localhost; charset=utf8", "root", "root");
+			$this->pdo = new PDO("mysql:dbname=bd_npo;host=localhost; charset=utf8", "root", "");
 			//$this->pdo->exec("SET CHARACTER SET utf8");
 
 			return $this->pdo;
