@@ -224,12 +224,12 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                                                 <div class="row row_form_user">
                                                                                                     <div class="col-md-3" style="float: left">
                                                                                                         <label for="id"><h6>ID</h6></label>
-                                                                                                        <input type="number" class="form-control form-control-sm" name="id" id="id" value="<?= isset($user['id']) ? $user['id'] : '' ?>">
+                                                                                                        <input type="number" class="form-control form-control-sm" name="id" id="id" value="<?= isset($user['id']) ? $user['id'] : '' ?>" disabled>
                                                                                                         
                                                                                                     </div>
                                                                                                     <div class="col-md-9" style="float: right">
                                                                                                         <label for="usuario"><h6>Usuário</h6></label>
-                                                                                                        <input type="text" class="form-control form-control-sm" name="usuario" id="usuario" placeholder="usuario" title="" value="<?= isset($user['usuario']) ? $user['usuario'] : '' ?>" required>
+                                                                                                        <input type="text" class="form-control form-control-sm" name="usuario" id="usuario" placeholder="usuario" title="" value="<?= isset($user['usuario']) ? $user['usuario'] : '' ?>" disabled required>
                                                                                                     </div>
 
                                                                                                 </div>
