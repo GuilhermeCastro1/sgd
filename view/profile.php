@@ -154,7 +154,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                                                     <div class="col">
                                                                                                     
                                                                                                         <!-- <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"  style="width:300px"> -->
-                                                                                                        <img id="avatar" src="<?= $user['c_foto'] ? '../assets/images/users/'.$user['c_foto'] : 'http://ssl.gstatic.com/accounts/ui/avatar_2x.png'; ?>" class="avatar img-circle img-thumbnail" alt="avatar"  style="width:300px">
+                                                                                                        <img id="avatar" src="<?= $user['c_foto'] ? '../assets/images/users/'.$user['c_foto'] : 'avatar_2x.png'; ?>" class="avatar img-circle img-thumbnail" alt="avatar"  style="width:300px">
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <div class="row">
@@ -185,7 +185,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                                                     
                                                                                                     <div class="col-md-5" style="float: left">
                                                                                                         <label for="nome"><h6>Nome</h6></label>
-                                                                                                        <input type="text" class="form-control form-control-sm" name="nome" id="nome" value="<?= isset($user['nome_completo']) ? $user['nome_completo'] : '' ?>" required>
+                                                                                                        <input type="text" class="form-control form-control-sm" name="nome" id="nome" value="<?= isset($user['nome']) ? $user['nome'] : '' ?>" required>
                                                                                                     </div>
 
                                                                                                     <div class="col-md-7" style="float: right">
