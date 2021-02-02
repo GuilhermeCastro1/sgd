@@ -14,7 +14,19 @@ switch($acao){
 		$uC->deslogar();
 	break;
 	case 'editar':
-		$uC->editarUsuario($id, $nome, $sobrenome, $dt_nasc, $func, $telefone, $email, $usuario, $senha, $c_foto);
+		//if (isset($_GET['nome']) && !empty($_GET['nome'])){
+
+			//$nome = addslashes($_GET['nome']);
+			//$sobrenome = addslashes($_GET['sobrenome']);
+			//$telefone = addslashes($_GET['telefone']);
+			//$email = addslashes($_GET['email']);
+			//$senha = addslashes($_GET['senha']);
+			//$c_foto = addslashes($_GET['c_foto']);
+		
+			$uC->editarUsuario($nome, $sobrenome, $telefone, $email, $senha); //$c_foto);
+
+			//header("Location: ../view/profile.php?msg=Usuario editado com sucesso!&nome=".$nome);
+			
 	break;
 	default:
 	break;
@@ -59,23 +71,19 @@ class UsuarioController{
 		exit;
 
 	}
-	public function editarUsuario($id, $nome, $sobrenome, $dt_nasc, $func, $telefone, $email, $usuario, $senha, $c_foto){
+	public function editarUsuario($nome, $sobrenome, $telefone, $email, $senha,){
 		
-		$this->id = $id;
 		$this->nome = $nome; 
 		$this->sobrenome = $sobrenome;
-		$this->dt_nasc = $dt_nasc;
-		$this->func = $func;
 		$this->telefone = $telefone;
 		$this->email = $email;
-		$this->usuario = $usuario;
 		$this->senha = $senha;
-		$this->c_foto = $c_foto;
+		//$this->c_foto = $c_foto;
 
 		$pdo = new Conexao();
 		
 		$user = new Usuarios($pdo);
-		$user->edit($this->id, $this->nome, $this->sobrenome, $this->dt_nasc, $this->func, $this->telefone, $this->email, $this->usuario, $this->senha, $this->c_foto);
+		$user->editUsuario($this->nome, $this->sobrenome,$this->telefone, $this->email, $this->senha);
 
 		return true;
 
