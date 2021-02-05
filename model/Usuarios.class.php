@@ -120,7 +120,7 @@ class Usuarios{
 	public function deslogar(){
 		
 		$sessao = session_start();
-		session_unset($sessao);
+		session_unset();
 
 		return true;
 	}

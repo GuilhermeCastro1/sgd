@@ -145,16 +145,31 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                                     
                                                                                 </div>
                                                                                 <div class="row">
+                                                                                    <!-- FOTO -->
+                                                                                        <div class="row rowForm">
+                                                                                        <div class="text-center" style="float:right; position: absolute; right: 4%; top: 4%">
+                                                                                            <img style="width: 150px; height: 150px; line-height: 50px" src="<?= isset($_GET['c_foto']) ? $_GET['c_foto'] : '../assets/images/users/avatar_2x.png' ?>" class="preview-img avatar img-circle img-thumbnail" alt="Sem imagem cadastrada!">
+                                                                                            <br>
+                                                                                            <div style="margin-top:10px; font-size: 12px">
+                                                                                                <input type="file" name="fileUpload" class="text-center center-block file-upload file-chooser file-button" accept="image/*" hidden>
+                                                                                            </div>
 
-                                                                                    <div class="col-sm-3"><!--left col-->
+                                                                                        </div>
+                                                                                        </div>
+
+                                                                                    <!-- END FOTO-->
+                                                                                </div>
+                                                                                <!-- FOTO -->
+                                                                                    <!--
+                                                                                    <div class="col-sm-3">left col
                                                                                         
 
                                                                                             <div class="text-center">
                                                                                                 <div class="row">
                                                                                                     <div class="col">
                                                                                                     
-                                                                                                        <!-- <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"  style="width:300px"> -->
-                                                                                                        <img id="avatar" src="<?= $user['c_foto'] ? '../assets/images/users/'.$user['c_foto'] : 'avatar_2x.png'; ?>" class="avatar img-circle img-thumbnail" alt="avatar"  style="width:300px">
+                                                                                                        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"  style="width:300px">
+                                                                                                       <img id="avatar" src="<?= $user['c_foto'] ? '../assets/images/users/'.$user['c_foto'] : 'avatar_2x.png'; ?>" class="avatar img-circle img-thumbnail" alt="avatar"  style="width:300px">
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <div class="row">
@@ -164,7 +179,23 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                                                         <label class="custom-file-label" for="customFile">Alterar a foto</label>        
                                                                                                     </div>
                                                                                                 </div>
+                                                                                            </div> -->
+
+                                                                                    <!-- END FOTO -->
+                                                                                        
+                                                                                                     <div class="text-center" style="float:right; position: absolute; right: 4%; top: 4%">
+                                                                                                        <img style="width: 150px; height: 150px; line-height: 50px" scr="<?= isset($_GET['c_foto']) ? $_GET['c_foto'] : '../assets/images/users/avatar_2x.png' ?>" class="preview-img avatar_2x img-circle img-thumbnail" alt="Sem imagem cadastrada!">
+                                                                                                           <br>
+                                                                                                           <div style="margin-top: 10px; font-size: 12px">
+                                                                                                              <input type="file" name="fileUpload" class="text-center center-block file-upload file-chooser file-button" accept="image/*" hidden>
                                                                                             </div>
+                                                                                                </div>
+                                                                                                    </div>
+                                                                                                    </div>
+                                                                                                    </div>
+
+                                                                                                <!-- END FOTO -->
+                                                                                            
                                                                                             
                                                                                             <br>
 
@@ -198,18 +229,18 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                                                 <div class="row row_form_user">
                                                                                                     <div class="col-md-4" style="float: left">
                                                                                                         <label for="dt_nasc"><h6>Data de nascimento</h6></label>
-                                                                                                        <input type="date" class="form-control form-control-sm" name="dt_nasc" id="dt_nasc" value="<?= isset($user['dt_nasc']) ? $user['dt_nasc'] : '' ?>" required>
+                                                                                                        <input type="date" class="form-control form-control-sm" name="dt_nasc" id="dt_nasc" value="<?= isset($user['dt_nasc']) ? $user['dt_nasc'] : '' ?>" disabled required>
                                                                                                     </div>
                                                                                                     <div class="col-md-8" style="float: right">
                                                                                                         <label for="func"><h6>Função</h6></label>
-                                                                                                        <input type="text" class="form-control form-control-sm" name="func" id="func" value="<?= isset($user['func']) ? $user['func'] : '' ?>" required>
+                                                                                                        <input type="text" class="form-control form-control-sm" name="func" id="func" value="<?= isset($user['func']) ? $user['func'] : '' ?>" disabled required>
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 
                                                                                                 <div class="row row_form_user">
                                                                                                     <div class="col-md-4" style="float: left">
                                                                                                         <label for="telefone"><h6>Telefone</h6></label>
-                                                                                                        <input type="tel" class="form-control form-control-sm" name="telefone" id="telefone" placeholder="(XX) XXXXX-XXXX" pattern="([0-9]{2})-[9]{1}[0-9]{4}-[0-9]{4}" value="<?= isset($user['telefone']) ? $user['telefone'] : '' ?>" required>
+                                                                                                        <input type="tel" class="form-control form-control-sm" name="telefone" id="telefone" placeholder="(XX) XXXXX-XXXX" title="seu numero aqui!" value="<?= isset($user['telefone']) ? $user['telefone'] : '' ?>" required>
                                                                                                         
                                                                                                     </div>
                                                                                                     <div class="col-md-8" style="float: right">
@@ -245,7 +276,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                                                     </div>
                                                                                                     <div class="col-md-6" style="float: right">
                                                                                                         
-                                                                                                        <input type="password" class="form-control form-control-sm pass" name="conf_senha" id="conf_senha" placeholder="*repita a senha" title="*confirme a senha*" required>
+                                                                                                        <input type="password" class="form-control form-control-sm pass" name="conf_senha" id="conf_senha" placeholder="*repita a senha" title="*confirme a senha*">
                                                                                                     </div>
 
                                                                                                 </div>
@@ -309,7 +340,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         </div>
             <script type="text/javascript">
                 $('#sbmt').click(function() { 
-                
+                    
                 }); 
             </script>
             <script type="text/javascript">
@@ -342,6 +373,25 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                 $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
                 });
             </script>
+            <script type="text/javascript">
+
+                const $ = document.querySelector.bind(document);
+
+                const previewImg = $('.preview-img');
+                const fileChooser = $('.file-chooser');
+                const fileButton = $('.file-button');
+
+                fileButton.onclick = () => fileChooser.click();
+
+                fileChooser.onchange = e => {
+                    const fileToUpload = e.target.files.item(0);
+                    const reader = new FileReader();
+                    reader.onload = e => previewImg.src = e.target.result;
+                    reader.readAsDataURL(fileToUpload);
+                };
+
+        
+    </script>
      
     </div>
 <!-- End Content -->

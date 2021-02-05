@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06-Jun-2020 às 17:36
--- Versão do servidor: 10.4.11-MariaDB
--- versão do PHP: 7.4.1
+-- Tempo de geração: 02-Fev-2021 às 17:39
+-- Versão do servidor: 10.4.17-MariaDB
+-- versão do PHP: 8.0.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -979,7 +978,12 @@ CREATE TABLE `usuarios` (
   `senha` varchar(32) NOT NULL,
   `email` varchar(80) NOT NULL,
   `apelido` varchar(100) NOT NULL,
-  `nome_completo` varchar(50) NOT NULL,
+  `c_foto` varchar(30) DEFAULT NULL,
+  `nome` varchar(30) DEFAULT NULL,
+  `sobrenome` varchar(40) DEFAULT NULL,
+  `dt_nasc` date DEFAULT NULL,
+  `func` varchar(40) DEFAULT NULL,
+  `telefone` varchar(20) DEFAULT NULL,
   `status` enum('ativo','inativo','','') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -987,19 +991,19 @@ CREATE TABLE `usuarios` (
 -- Extraindo dados da tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `usuario`, `senha`, `email`, `apelido`, `nome_completo`, `status`) VALUES
-(1, 'admin', 'admin', 'admin@npo.com.br', 'Administrador', '', 'inativo'),
-(2, 'alisson', '123', 'alissoncavalcanticma@gmail.com', 'Alisson', 'Alisson Cavalcanti', 'ativo'),
-(3, 'guilherme', '123', '...', 'Guilherme', 'Guilherme Henrique J. Castro', 'ativo'),
-(4, 'ribeiro', '123', '...', 'Ribeiro', 'Jose Ribeiro', 'ativo'),
-(5, 'bruno', '123', '', 'Bruno', 'Bruno Nascimento', 'inativo'),
-(6, 'fabio', '123', '', 'Fabio Kleber', 'Fábio Kléber Pereira', 'ativo'),
-(7, 'almir', '123', '', 'Almir', 'Almir Albuquerque', 'ativo'),
-(8, 'felipe', '123', '', 'Felipe', 'Felipe Manoel', 'ativo'),
-(9, 'abelardo', '123', '', 'Abelardo', 'Abelardo Campina', 'inativo'),
-(10, 'marcio', '123', '', 'Marcio', 'Márcio Castro', 'inativo'),
-(12, 'cleiton', '123', 'h2oinformatica@gmail.com', 'Cleiton', 'Cleiton Oliveira', 'ativo'),
-(13, 'matheus', '123', 'matheusbarfos', 'Matheus', 'Matheus Barfos', 'ativo');
+INSERT INTO `usuarios` (`id`, `usuario`, `senha`, `email`, `apelido`, `c_foto`, `nome`, `sobrenome`, `dt_nasc`, `func`, `telefone`, `status`) VALUES
+(1, 'admin', 'admin', 'admin@npo.com.br', 'Administrador', NULL, '', NULL, NULL, NULL, NULL, 'inativo'),
+(2, 'alisson', '123', 'alissoncavalcanticma@gmail.com', 'Alisson', 'alisson.jpg', 'Alisson', ' Cavalcanti', '1990-02-19', '...', '81982052544', 'ativo'),
+(3, 'guilherme', '123', 'guilherme.castro@nposervices.com', 'Guilherme', 'guilherme.jpg', 'Guilherme', 'Henrique', '1996-02-25', 'Operador de Infraestrutura', '(81) 97109-7631', 'ativo'),
+(4, 'ribeiro', '123', '...', 'Ribeiro', 'ribeiro.jpg', 'Jose', 'Ribeiro', '1959-07-06', 'Operador de Infraestrutura', '(81) 99879-1585', 'ativo'),
+(5, 'bruno', '123', '', 'Bruno', NULL, 'Bruno Nascimento', NULL, NULL, NULL, NULL, 'inativo'),
+(6, 'fabio', '123', '', 'Fabio Kleber', 'fabio kleber.jpg', 'Fábio', 'Kléber', '1979-11-28', NULL, NULL, 'ativo'),
+(7, 'almir', '123', '', 'Almir', 'almir.jpg', 'Almir', 'Albuquerque', '1985-06-13', 'Operador de Infraestrutura', '(81) 99411-9070', 'ativo'),
+(8, 'felipe', '123', '', 'Felipe', 'felipe.jpg', 'Felipe', 'Manoel', '1993-11-24', 'Operador de Infraestrutura', '(81) 99137-3098', 'ativo'),
+(9, 'abelardo', '123', '', 'Abelardo', NULL, 'Abelardo Campina', NULL, NULL, NULL, NULL, 'inativo'),
+(10, 'marcio', '123', '', 'Marcio', NULL, 'Márcio Castro', NULL, NULL, NULL, NULL, 'inativo'),
+(12, 'cleiton', '123', 'h2oinformatica@gmail.com', 'Cleiton', 'cleiton.jpg', 'Cleiton', 'Oliveira', '1985-03-24', 'Operador de Infraestrutura', '(81) 99700-5099', 'ativo'),
+(13, 'matheus', '123', '...', 'Matheus', 'matheus.jpg', 'Matheus', 'Rafael', '1999-08-03', 'Operador de Infraestrutura', '(81) 98135-7974', 'ativo');
 
 --
 -- Índices para tabelas despejadas
