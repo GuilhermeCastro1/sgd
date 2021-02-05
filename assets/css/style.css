@@ -364,3 +364,8 @@ input[type=reset]:active {
     margin-top: 8px;
     margin-bottom: 15px;
 }
+
+.ft01{
+    position: absolute !important;
+    right: 5px !important;
+}

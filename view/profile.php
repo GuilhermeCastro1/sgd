@@ -145,56 +145,39 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                                     
                                                                                 </div>
                                                                                 <div class="row">
-                                                                                    <!-- FOTO -->
+                                                                                    <!-- FOTO 
                                                                                         <div class="row rowForm">
                                                                                         <div class="text-center" style="float:right; position: absolute; right: 4%; top: 4%">
                                                                                             <img style="width: 150px; height: 150px; line-height: 50px" src="<?= isset($_GET['c_foto']) ? $_GET['c_foto'] : '../assets/images/users/avatar_2x.png' ?>" class="preview-img avatar img-circle img-thumbnail" alt="Sem imagem cadastrada!">
                                                                                             <br>
                                                                                             <div style="margin-top:10px; font-size: 12px">
-                                                                                                <input type="file" name="fileUpload" class="text-center center-block file-upload file-chooser file-button" accept="image/*" hidden>
-                                                                                            </div>
-
+                                                                                                <input type="file" name="fileUpload" class="custom-file-label custom-file-input text-right center-block file-upload file-chooser file-button" accept="image/*" value="inserir foto">
+                                                                                               
+                                                                                            </div>                                                                                        
                                                                                         </div>
                                                                                         </div>
 
-                                                                                    <!-- END FOTO-->
+                                                                                     END FOTO-->
                                                                                 </div>
                                                                                 <!-- FOTO -->
-                                                                                    <!--
-                                                                                    <div class="col-sm-3">left col
+                                                                                    
+                                                                                    <div class="col-sm-3 ft01">
                                                                                         
 
                                                                                             <div class="text-center">
                                                                                                 <div class="row">
-                                                                                                    <div class="col">
-                                                                                                    
-                                                                                                        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"  style="width:300px">
-                                                                                                       <img id="avatar" src="<?= $user['c_foto'] ? '../assets/images/users/'.$user['c_foto'] : 'avatar_2x.png'; ?>" class="avatar img-circle img-thumbnail" alt="avatar"  style="width:300px">
+                                                                                                    <div class="col">                                                                                                                                                                                    
+                                                                                                       <img id="avatar" src="<?= $user['c_foto'] ? '../assets/images/users/'.$user['c_foto'] : 'avatar_2x.png'; ?>" class="avatar img-circle img-thumbnail preview-img" alt="Sem imagem cadastrada!"  style="width:300px">
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <div class="row">
                                                                                                     <div class="col">
                                                                                                         <br>
-                                                                                                        <input type="file" class="custom-file-input text-right center-block file-upload" id="customFile">
+                                                                                                        <input type="file" class="custom-file-input text-right center-block file-upload file-chooser file-button" id="customFile" name="fileUpload" accept="image/*">
                                                                                                         <label class="custom-file-label" for="customFile">Alterar a foto</label>        
                                                                                                     </div>
                                                                                                 </div>
-                                                                                            </div> -->
-
-                                                                                    <!-- END FOTO -->
-                                                                                        
-                                                                                                     <div class="text-center" style="float:right; position: absolute; right: 4%; top: 4%">
-                                                                                                        <img style="width: 150px; height: 150px; line-height: 50px" scr="<?= isset($_GET['c_foto']) ? $_GET['c_foto'] : '../assets/images/users/avatar_2x.png' ?>" class="preview-img avatar_2x img-circle img-thumbnail" alt="Sem imagem cadastrada!">
-                                                                                                           <br>
-                                                                                                           <div style="margin-top: 10px; font-size: 12px">
-                                                                                                              <input type="file" name="fileUpload" class="text-center center-block file-upload file-chooser file-button" accept="image/*" hidden>
                                                                                             </div>
-                                                                                                </div>
-                                                                                                    </div>
-                                                                                                    </div>
-                                                                                                    </div>
-
-                                                                                                <!-- END FOTO -->
                                                                                             
                                                                                             
                                                                                             <br>
@@ -343,7 +326,8 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                     
                 }); 
             </script>
-            <script type="text/javascript">
+
+            <!--<script type="text/javascript">
         
                 $(document).ready(function() {
                 
@@ -372,26 +356,26 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                 var fileName = $(this).val().split("\\").pop();
                 $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
                 });
-            </script>
+            </script>-->
             <script type="text/javascript">
 
-                const $ = document.querySelector.bind(document);
+                    const $ = document.querySelector.bind(document);
 
-                const previewImg = $('.preview-img');
-                const fileChooser = $('.file-chooser');
-                const fileButton = $('.file-button');
+                    const previewImg = $('.preview-img');
+                    const fileChooser = $('.file-chooser');
+                    const fileButton = $('.file-button');
 
-                fileButton.onclick = () => fileChooser.click();
+                    fileButton.onclick = () => fileChooser.click();
 
-                fileChooser.onchange = e => {
-                    const fileToUpload = e.target.files.item(0);
-                    const reader = new FileReader();
-                    reader.onload = e => previewImg.src = e.target.result;
-                    reader.readAsDataURL(fileToUpload);
-                };
+                    fileChooser.onchange = e => {
+                        const fileToUpload = e.target.files.item(0);
+                        const reader = new FileReader();
+                        reader.onload = e => previewImg.src = e.target.result;
+                        reader.readAsDataURL(fileToUpload);
+                    };
 
         
-    </script>
+            </script>
      
     </div>
 <!-- End Content -->
