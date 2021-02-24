@@ -71,7 +71,7 @@ class UsuarioController{
 		exit;
 
 	}
-	public function editarUsuario($nome, $sobrenome, $telefone, $email, $senha,){
+	public function editarUsuario($nome, $sobrenome, $telefone, $email, $senha){
 		
 		$this->nome = $nome; 
 		$this->sobrenome = $sobrenome;
