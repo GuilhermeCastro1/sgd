@@ -47,7 +47,7 @@
 
                                                             </div>
                                                             <div class="col-md-2 table-bordered text-center">
-                                                                DC FCA
+                                                                DC MP
                                                             </div>
                                                             <div class="col-md-2 table-bordered text-center">
                                                                 DC Supplier Park
@@ -66,11 +66,11 @@
                                                             <div class="col-md-4 table-bordered">
                                                                 <label>Operador:</label>
                                                             </div>
-                                                            <!-- OPERADOR FCA -->
+                                                            <!-- OPERADOR MP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="">
 
-                                                                    <select tabindex="2"  id="operador_fca" name="operador_fca" class="form-control input-format-center" required oninvalid="setCustomValidity('Selecione um operador')" onchange="try{setCustomValidity('')}catch(e){}">
+                                                                    <select tabindex="2"  id="operador_mp" name="operador_mp" class="form-control input-format-center" required oninvalid="setCustomValidity('Selecione um operador')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                         <option  value=""></option>
                                                                         
                                                                         
@@ -95,7 +95,7 @@
                                                                                                                     //Lógica de Editar
                                                                                                                     else {
                                                                                                                         
-                                                                                                                        $uc = $userC->retornaApelido($chk['operador_fca']);
+                                                                                                                        $uc = $userC->retornaApelido($chk['operador_mp']);
                                                                                                                         //echo $uc['apelido'];
                                                                                                                         echo $user['apelido'] == $uc['apelido'] ? 'selected' : '';
                                                                                                                     }
@@ -110,7 +110,7 @@
                                                                 </div>
 
                                                             </div>
-                                                            <!-- END OPERADOR FCA -->
+                                                            <!-- END OPERADOR MP -->
 
                                                             <!-- OPERADOR SP -->
                                                             <div class="col-md-2 table-bordered">
@@ -232,18 +232,18 @@
                                                             <div class="col-md-4 table-bordered">
                                                                 Hora:
                                                             </div>
-                                                            <!-- HORA FCA -->
+                                                            <!-- HORA MP -->
                                                             <div class="col-md-2 table-bordered" style="padding-left: 2px; padding-right: 2px;">
                                                                 <div style="width: 50%; float: left; text-align: center">
                                                                     <label style="font-size: 13px">Entrada:</label>
-                                                                    <input tabindex="3" name="entrada_fca" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['entrada_fca'] : '' ?>" required oninvalid="setCustomValidity('Insira a hora de entrada')" onchange="try{setCustomValidity('')}catch(e){}">
+                                                                    <input tabindex="3" name="entrada_mp" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['entrada_mp'] : '' ?>" required oninvalid="setCustomValidity('Insira a hora de entrada')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                                 <div style="width: 50%; float: right; text-align: center">
                                                                     <label style="font-size: 13px">Saída:</label>
-                                                                    <input tabindex="4" name="saida_fca" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['saida_fca'] : '' ?>" required oninvalid="setCustomValidity('Insira a hora de saída')" onchange="try{setCustomValidity('')}catch(e){}">
+                                                                    <input tabindex="4" name="saida_mp" type="time" class="form-control time-adjust input-format-center" value="<?= isset($id) ? $chk['saida_mp'] : '' ?>" required oninvalid="setCustomValidity('Insira a hora de saída')" onchange="try{setCustomValidity('')}catch(e){}">
                                                                 </div>
                                                             </div>
-                                                            <!-- END HORA FCA -->
+                                                            <!-- END HORA MP -->
                                                             <!-- HORA SP -->
                                                             <div class="col-md-2 table-bordered" style="padding-left: 2px; padding-right: 2px;">
                                                                 <div style="width: 50%; float: left; text-align: center">
@@ -293,13 +293,13 @@
                                                             <div class="col-md-4 table-bordered">
                                                                 Rack's:
                                                             </div>
-                                                            <!-- RACK'S FCA -->
+                                                            <!-- RACK'S MP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input style="line-height: 0.5; text-align: center;" type="checkbox" name="racks_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['racks_fca'] == 1 ? "checked" : ""; ?> style="padding-top: 0px">
+                                                                    <input style="line-height: 0.5; text-align: center;" type="checkbox" name="racks_mp" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['racks_mp'] == 1 ? "checked" : ""; ?> style="padding-top: 0px">
                                                                 </div>
                                                             </div>
-                                                            <!-- END RACK'S FCA -->
+                                                            <!-- END RACK'S MP -->
                                                             <!-- RACK'S SP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
@@ -329,13 +329,13 @@
                                                             <div class="col-md-4 table-bordered">
                                                                 Organização da Sala:
                                                             </div>
-                                                            <!-- ORGAN. SALA FCA -->
+                                                            <!-- ORGAN. SALA MP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="org_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['org_fca'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="org_mp" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['org_mp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
-                                                            <!-- END ORGAN. SALA FCA -->
+                                                            <!-- END ORGAN. SALA MP -->
                                                             <!-- ORGAN. SALA SP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
@@ -364,13 +364,13 @@
                                                             <div class="col-md-4 table-bordered">
                                                                 Luminárias:
                                                             </div>
-                                                            <!-- LUMINARIAS FCA -->
+                                                            <!-- LUMINARIAS MP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="lumin_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['lumin_fca'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="lumin_mp" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['lumin_mp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
-                                                            <!-- END LUMINARIAS FCA -->
+                                                            <!-- END LUMINARIAS MP -->
                                                             <!-- LUMINARIAS SP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
@@ -400,13 +400,13 @@
                                                             <div class="col-md-4 table-bordered">
                                                                 Infra-estrutura da sala:
                                                             </div>
-                                                            <!-- INFRA FCA -->
+                                                            <!-- INFRA MP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="infra_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['infra_fca'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="infra_mp" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['infra_mp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
-                                                            <!-- END INFRA FCA -->
+                                                            <!-- END INFRA MP -->
                                                             <!-- INFRA SP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
@@ -436,13 +436,13 @@
                                                             <div class="col-md-4 table-bordered">
                                                                 Condição de acesso:
                                                             </div>
-                                                            <!-- CONDIÇÃO DE ACESSO FCA -->
+                                                            <!-- CONDIÇÃO DE ACESSO MP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="acesso_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['acesso_fca'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="acesso_mp" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['acesso_mp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
-                                                            <!-- END CONDIÇÃO DE ACESSO FCA -->
+                                                            <!-- END CONDIÇÃO DE ACESSO MP -->
                                                             <!-- CONDIÇÃO DE ACESSO SP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
@@ -471,13 +471,13 @@
                                                             <div class="col-md-4 table-bordered">
                                                                 Porta corta fogo:
                                                             </div>
-                                                            <!-- PT CORTA FOGO FCA -->
+                                                            <!-- PT CORTA FOGO MP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="portacf_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['portacf_fca'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="portacf_mp" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['portacf_mp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
-                                                            <!-- END PT CORTA FOGO FCA-->
+                                                            <!-- END PT CORTA FOGO MP-->
                                                             <!-- PT CORTA FOGO SP-->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
@@ -502,13 +502,13 @@
                                                             <div class="col-md-4 table-bordered">
                                                                 Ar-condicionados:
                                                             </div>
-                                                            <!-- AR-CONDICIONADOS FCA-->
+                                                            <!-- AR-CONDICIONADOS MP-->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="arc_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['arc_fca'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="arc_mp" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['arc_mp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
-                                                            <!-- END AR-CONDICIONADOS FCA -->
+                                                            <!-- END AR-CONDICIONADOS MP -->
                                                             <!-- AR-CONDICIONADOS SP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
@@ -538,13 +538,13 @@
                                                             <div class="col-md-4 table-bordered">
                                                                 Sistema / Extintores de incêndio:
                                                             </div>
-                                                            <!-- SISTEMA / EXTINTORES DE INCÊNDIO FCA -->
+                                                            <!-- SISTEMA / EXTINTORES DE INCÊNDIO MP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="sist_extint_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['sist_extint_fca'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="sist_extint_mp" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['sist_extint_mp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
-                                                            <!-- END SISTEMA / EXTINTORES DE INCÊNDIO FCA -->
+                                                            <!-- END SISTEMA / EXTINTORES DE INCÊNDIO MP -->
                                                             <!-- SISTEMA / EXTINTORES DE INCÊNDIO SP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
@@ -574,13 +574,13 @@
                                                             <div class="col-md-4 table-bordered">
                                                                 Led de Saúde:
                                                             </div>
-                                                            <!-- LED SAUDE FCA -->
+                                                            <!-- LED SAUDE MP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="ledsaude_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['ledsaude_fca'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="ledsaude_mp" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['ledsaude_mp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
-                                                            <!-- END LED SAUDE FCA -->
+                                                            <!-- END LED SAUDE MP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 
                                                             </div>
@@ -607,18 +607,18 @@
                                                                 TEMP. 1 / HUMID. 1:
                                                             </div>
                                                             <div class="col-md-2 table-bordered">
-                                                                <!-- TEMPERATURA FCA 01  -->
+                                                                <!-- TEMPERATURA MP 01  -->
                                                                 <div style="width: 50%; float: left">
                                                                     
-                                                                    <input tabindex="5" name="temp01_fca" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp01_fca'] : '' ?>" required oninvalid="setCustomValidity('Insira a temperatura 01 FCA')" onchange="try{setCustomValidity('')}catch(e){}" onkeydown="return FilterInput(event)" onpaste="handlePaste(event)" onkeypress="validar2(this); return numerico2(event);">
+                                                                    <input tabindex="5" name="temp01_mp" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp01_mp'] : '' ?>" required oninvalid="setCustomValidity('Insira a temperatura 01 MP')" onchange="try{setCustomValidity('')}catch(e){}" onkeydown="return FilterInput(event)" onpaste="handlePaste(event)" onkeypress="validar2(this); return numerico2(event);">
                                                                 </div>
-                                                                <!-- END TEMPERATURA FCA 01  -->
-                                                                <!-- HUMIDADE FCA 01  -->
+                                                                <!-- END TEMPERATURA MP 01  -->
+                                                                <!-- HUMIDADE MP 01  -->
                                                                 <div style="width: 50%; float: right">
 
-                                                                    <input tabindex="5" name="humid01_fca" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid01_fca'] : '' ?>"  required oninvalid="setCustomValidity('Insira a humidade 01 FCA')" onchange="try{setCustomValidity('')}catch(e){}" onkeydown="return FilterInput(event)" onpaste="handlePaste(event)" onkeypress="validar2(this); return numerico2(event);">
+                                                                    <input tabindex="5" name="humid01_mp" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid01_mp'] : '' ?>"  required oninvalid="setCustomValidity('Insira a humidade 01 MP')" onchange="try{setCustomValidity('')}catch(e){}" onkeydown="return FilterInput(event)" onpaste="handlePaste(event)" onkeypress="validar2(this); return numerico2(event);">
                                                                 </div>
-                                                                <!-- END HUMIDADE FCA 01 -->
+                                                                <!-- END HUMIDADE MP 01 -->
                                                             </div>
 
                                                             <div class="col-md-2 table-bordered">
@@ -675,18 +675,18 @@
                                                                 TEMP. 2 / HUMID. 2:
                                                             </div>
                                                             <div class="col-md-2 table-bordered">
-                                                                <!-- TEMPERATURA FCA 02  -->
+                                                                <!-- TEMPERATURA MP 02  -->
                                                                 <div style="width: 50%; float: left">
                                                                     
-                                                                    <input tabindex="5" name="temp02_fca" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp02_fca'] : '' ?>" required oninvalid="setCustomValidity('Insira a temperatura 02 FCA')" onchange="try{setCustomValidity('')}catch(e){}" onkeydown="return FilterInput(event)" onpaste="handlePaste(event)" onkeypress="validar2(this); return numerico2(event);">
+                                                                    <input tabindex="5" name="temp02_mp" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp02_mp'] : '' ?>" required oninvalid="setCustomValidity('Insira a temperatura 02 MP')" onchange="try{setCustomValidity('')}catch(e){}" onkeydown="return FilterInput(event)" onpaste="handlePaste(event)" onkeypress="validar2(this); return numerico2(event);">
                                                                 </div>
-                                                                <!-- END TEMPERATURA FCA 02  -->
-                                                                <!-- HUMIDADE FCA 02  -->
+                                                                <!-- END TEMPERATURA MP 02  -->
+                                                                <!-- HUMIDADE MP 02  -->
                                                                 <div style="width: 50%; float: right">
 
-                                                                    <input tabindex="5" name="humid02_fca" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid02_fca'] : '' ?>" required oninvalid="setCustomValidity('Insira a humidade 02 FCA')" onchange="try{setCustomValidity('')}catch(e){}" onkeydown="return FilterInput(event)" onpaste="handlePaste(event)" onkeypress="validar2(this); return numerico2(event);">
+                                                                    <input tabindex="5" name="humid02_mp" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid02_mp'] : '' ?>" required oninvalid="setCustomValidity('Insira a humidade 02 MP')" onchange="try{setCustomValidity('')}catch(e){}" onkeydown="return FilterInput(event)" onpaste="handlePaste(event)" onkeypress="validar2(this); return numerico2(event);">
                                                                 </div>
-                                                                <!-- END HUMIDADE FCA 02 -->
+                                                                <!-- END HUMIDADE MP 02 -->
                                                             </div>
 
                                                             <div class="col-md-2 table-bordered">
@@ -740,18 +740,18 @@
                                                                 TEMP. 3 / HUMID. 3:
                                                             </div>
                                                             <div class="col-md-2 table-bordered">
-                                                                <!-- TEMPERATURA FCA 03  -->
+                                                                <!-- TEMPERATURA MP 03  -->
                                                                 <div style="width: 50%; float: left">
                                                                     
-                                                                    <input tabindex="5" name="temp03_fca" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp03_fca'] : '' ?>" required oninvalid="setCustomValidity('Insira a temperatura 03 FCA')" onchange="try{setCustomValidity('')}catch(e){}" onkeydown="return FilterInput(event)" onpaste="handlePaste(event)" onkeypress="validar2(this); return numerico2(event);">
+                                                                    <input tabindex="5" name="temp03_mp" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['temp03_mp'] : '' ?>" required oninvalid="setCustomValidity('Insira a temperatura 03 MP')" onchange="try{setCustomValidity('')}catch(e){}" onkeydown="return FilterInput(event)" onpaste="handlePaste(event)" onkeypress="validar2(this); return numerico2(event);">
                                                                 </div>
-                                                                <!-- END TEMPERATURA FCA 03  -->
-                                                                <!-- HUMIDADE FCA 03 -->
+                                                                <!-- END TEMPERATURA MP 03  -->
+                                                                <!-- HUMIDADE MP 03 -->
                                                                 <div style="width: 50%; float: right">
 
-                                                                    <input tabindex="5" name="humid03_fca" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid03_fca'] : '' ?>" required oninvalid="setCustomValidity('Insira a humidade 03 FCA')" onchange="try{setCustomValidity('')}catch(e){}" onkeydown="return FilterInput(event)" onpaste="handlePaste(event)" onkeypress="validar2(this); return numerico2(event);">
+                                                                    <input tabindex="5" name="humid03_mp" type="number" class="form-control input-format-center" value="<?= isset($id) ? $chk['humid03_mp'] : '' ?>" required oninvalid="setCustomValidity('Insira a humidade 03 MP')" onchange="try{setCustomValidity('')}catch(e){}" onkeydown="return FilterInput(event)" onpaste="handlePaste(event)" onkeypress="validar2(this); return numerico2(event);">
                                                                 </div>
-                                                                <!-- END HUMIDADE FCA 03 -->
+                                                                <!-- END HUMIDADE MP 03 -->
                                                             </div>
 
                                                             <div class="col-md-2 table-bordered">
@@ -843,13 +843,13 @@
                                                             <div class="col-md-4 table-bordered">
                                                                 Luminárias:
                                                             </div>
-                                                            <!-- LUMINÁRIAS SALA CIRCULAÇÃO FCA  -->
+                                                            <!-- LUMINÁRIAS SALA CIRCULAÇÃO MP  -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="lumin_sc_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['lumin_sc_fca'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="lumin_sc_mp" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['lumin_sc_mp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
-                                                            <!-- END LUMINÁRIAS SALA CIRCULAÇÃO FCA  -->
+                                                            <!-- END LUMINÁRIAS SALA CIRCULAÇÃO MP  -->
 
                                                             <div class="col-md-2 table-bordered">
                                                                 <!--<div class="input-format-center">
@@ -877,13 +877,13 @@
                                                             <div class="col-md-4 table-bordered">
                                                                 Porta corta fogo:
                                                             </div>
-                                                            <!-- PORTA CORTA FOGO SALA CIRCULAÇÃO FCA  -->
+                                                            <!-- PORTA CORTA FOGO SALA CIRCULAÇÃO MP  -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="portacf_sc_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['portacf_sc_fca'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="portacf_sc_mp" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['portacf_sc_mp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
-                                                            <!-- END PORTA CORTA FOGO SALA CIRCULAÇÃO FCA  -->
+                                                            <!-- END PORTA CORTA FOGO SALA CIRCULAÇÃO MP  -->
 
                                                             <div class="col-md-2 table-bordered">
                                                                 <!--<div class="input-format-center">
@@ -907,18 +907,18 @@
                                                         </div>
                                                         <!-- END PORTA CORTA FOGO SC -->
 
-                                                        <!-- CONDIÇÃO DE ACESSO SALA CIRC. FCA -->
+                                                        <!-- CONDIÇÃO DE ACESSO SALA CIRC. MP -->
                                                         <div class="row">
                                                             <div class="col-md-4 table-bordered">
                                                                 Condição de acesso:
                                                             </div>
-                                                            <!-- CONDIÇÃO DE ACESSO SALA CIRC. FCA -->
+                                                            <!-- CONDIÇÃO DE ACESSO SALA CIRC. MP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="acesso_sc_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['acesso_sc_fca'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="acesso_sc_mp" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['acesso_sc_mp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
-                                                            <!-- END CONDIÇÃO DE ACESSO SALA CIRC. FCA -->
+                                                            <!-- END CONDIÇÃO DE ACESSO SALA CIRC. MP -->
 
                                                             <div class="col-md-2 table-bordered">
                                                                 <!--<div class="input-format-center">
@@ -940,7 +940,7 @@
                                                                 -->
                                                             </div>
                                                         </div>
-                                                        <!-- END CONDIÇÃO DE ACESSO SALA CIRC. FCA  -->
+                                                        <!-- END CONDIÇÃO DE ACESSO SALA CIRC. MP  -->
 
                                                         <!-- END SALA DE CIRCULAÇÃO -->
 
@@ -955,20 +955,20 @@
                                                             <div class="col-md-4 table-bordered">
                                                                 Geradores:
                                                             </div>
-                                                            <!-- GERADORES FCA -->
+                                                            <!-- GERADORES MP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="geradores_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['geradores_fca'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="geradores_mp" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['geradores_mp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
-                                                            <!-- END GERADORES FCA -->
+                                                            <!-- END GERADORES MP -->
                                                             <!-- GERADORES SP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
                                                                     <input type="checkbox" name="geradores_sp" data-toggle="toggle" data-width="100" data-height="2" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['geradores_sp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
-                                                            <!-- END GERADORES FCA -->
+                                                            <!-- END GERADORES SP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <!--
                                                                 <div class="input-format-center">
@@ -991,13 +991,13 @@
                                                             <div class="col-md-4 table-bordered">
                                                                 Organização externa:
                                                             </div>
-                                                            <!-- ORG EXTERNA FCA -->
+                                                            <!-- ORG EXTERNA MP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
-                                                                    <input type="checkbox" name="org_ext_fca" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['org_ext_fca'] == 1 ? "checked" : ""; ?>>
+                                                                    <input type="checkbox" name="org_ext_mp" data-toggle="toggle" data-width="100" data-height="10" data-on="OK" data-off="X" data-onstyle="success" data-offstyle="danger" value="1" <?= $chk['org_ext_mp'] == 1 ? "checked" : ""; ?>>
                                                                 </div>
                                                             </div>
-                                                            <!-- END ORG EXTERNA FCA -->
+                                                            <!-- END ORG EXTERNA MP -->
                                                             <!-- ORG EXTERNA SP -->
                                                             <div class="col-md-2 table-bordered">
                                                                 <div class="input-format-center">
@@ -1067,16 +1067,16 @@
                                                         <!-- END MONITORAMENTO -->
                                                         <hr>
                                                         <!-- OBS CHECKLIST -->
-                                                        <!-- OBS CHECKLIST FCA -->
+                                                        <!-- OBS CHECKLIST MP -->
                                                         <div class="row table-bordered">
-                                                            <p style="text-align: center; width: 100%; background-color: #E9ECEF; color: #666666">OBS CHECKLIST DC FCA</p>
+                                                            <p style="text-align: center; width: 100%; background-color: #E9ECEF; color: #666666">OBS CHECKLIST DC MP</p>
                                                         </div>
 
                                                         <div class="row table-bordered">
 
-                                                                <textarea tabindex="18" name="obs_fca" id="textarea-input" placeholder="Detalhamento das observações de checklist do DC FCA" class="form-control form-control-textarea" style="width: 100%" ><?= $chk['obs_fca']; ?></textarea>
+                                                                <textarea tabindex="18" name="obs_fca" id="textarea-input" placeholder="Detalhamento das observações de checklist do DC MP" class="form-control form-control-textarea" style="width: 100%" ><?= $chk['obs_mp']; ?></textarea>
                                                         </div>
-                                                        <!-- END OBS CHECKLIST FCA -->
+                                                        <!-- END OBS CHECKLIST MP -->
                                                         <!-- OBS CHECKLIST SP -->
                                                         <div class="row table-bordered">
                                                             <p style="text-align: center; width: 100%; background-color: #E9ECEF; color: #666666">OBS CHECKLIST DC SUPPLIER PARK</p>

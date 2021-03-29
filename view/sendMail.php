@@ -9,7 +9,7 @@
 	$nome = 'Alisson C';
 	$email = 'alisson@alstwo.com.br';
 	$msg = addslashes($_POST['msg']);
-	$dc = 'FCA';
+	$dc = 'MP';
 
 	$para = "alissoncavalcanticma@gmail.com";
 	$assunto = "Acesso ao DC ".$dc;

@@ -5,62 +5,62 @@ class Checklist{
 	private $id;
 	private $turno;
 	private $data;
-	private $operador_fca;
+	private $operador_mp;
 	private $operador_sp;
 	private $operador_tr;
-	private $entrada_fca;
-	private $saida_fca;
+	private $entrada_mp;
+	private $saida_mp;
 	private $entrada_sp;
 	private $saida_sp;
 	private $entrada_tr;
 	private $saida_tr;
-	private $racks_fca;
+	private $racks_mp;
 	private $racks_sp;
 	private $racks_tr;
-	private $org_fca;
+	private $org_mp;
 	private $org_sp;
 	private $org_tr;
-	private $lumin_fca;
+	private $lumin_mp;
 	private $lumin_sp;
 	private $lumin_tr;
-	private $infra_fca;
+	private $infra_mp;
 	private $infra_sp;
 	private $infra_tr;
-	private $acesso_fca;
+	private $acesso_mp;
 	private $acesso_sp;
 	private $acesso_tr;
-	private $portacf_fca;
+	private $portacf_mp;
 	private $portacf_sp;
-	private $arc_fca;
+	private $arc_mp;
 	private $arc_sp;
 	private $arc_tr;
-	private $sist_extint_fca;
+	private $sist_extint_mp;
 	private $sist_extint_sp;
 	private $sist_extint_tr;
-	private $ledsaude_fca;
-	private $temp01_fca;
-	private $humid01_fca;
+	private $ledsaude_mp;
+	private $temp01_mp;
+	private $humid01_mp;
 	private $temp01_sp;
 	private $humid01_sp;
-	private $temp02_fca;
-	private $humid02_fca;
+	private $temp02_mp;
+	private $humid02_mp;
 	private $temp02_sp;
 	private $humid02_sp;
-	private $temp03_fca;
-	private $humid03_fca;
+	private $temp03_mp;
+	private $humid03_mp;
 	private $temp03_sp;
 	private $humid03_sp;
 	private $cap_ups_tr;
-	private $lumin_sc_fca;
-	private $portacf_sc_fca;
-	private $acesso_sc_fca;
-	private $geradores_fca;
+	private $lumin_sc_mp;
+	private $portacf_sc_mp;
+	private $acesso_sc_mp;
+	private $geradores_mp;
 	private $geradores_sp;
-	private $org_ext_fca;
+	private $org_ext_mp;
 	private $org_ext_sp;
 	private $org_ext_tr;
 	private $zabbix;
-	private $obs_fca;
+	private $obs_mp;
 	private $obs_sp;
 	private $obs_tr;
 	private $chk_carro;
@@ -151,19 +151,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getOperadorFca()
+    public function getOperadorMp()
     {
-        return $this->operador_fca;
+        return $this->operador_mp;
     }
 
     /**
-     * @param mixed $operador_fca
+     * @param mixed $operador_mp
      *
      * @return self
      */
-    public function setOperadorFca($operador_fca)
+    public function setOperadorMp($operador_mp)
     {
-        $this->operador_fca = $operador_fca;
+        $this->operador_mp = $operador_mp;
 
         return $this;
     }
@@ -211,19 +211,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getEntradaFca()
+    public function getEntradaMp()
     {
-        return $this->entrada_fca;
+        return $this->entrada_mp;
     }
 
     /**
-     * @param mixed $entrada_fca
+     * @param mixed $entrada_mp
      *
      * @return self
      */
-    public function setEntradaFca($entrada_fca)
+    public function setEntradaMp($entrada_mp)
     {
-        $this->entrada_fca = $entrada_fca;
+        $this->entrada_mp = $entrada_mp;
 
         return $this;
     }
@@ -231,19 +231,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getSaidaFca()
+    public function getSaidaMp()
     {
-        return $this->saida_fca;
+        return $this->saida_mp;
     }
 
     /**
-     * @param mixed $saida_fca
+     * @param mixed $saida_mp
      *
      * @return self
      */
-    public function setSaidaFca($saida_fca)
+    public function setSaidaMp($saida_mp)
     {
-        $this->saida_fca = $saida_fca;
+        $this->saida_mp = $saida_mp;
 
         return $this;
     }
@@ -331,19 +331,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getRacksFca()
+    public function getRacksMp()
     {
-        return $this->racks_fca;
+        return $this->racks_mp;
     }
 
     /**
-     * @param mixed $racks_fca
+     * @param mixed $racks_mp
      *
      * @return self
      */
-    public function setRacksFca($racks_fca)
+    public function setRacksMp($racks_mp)
     {
-        $this->racks_fca = $racks_fca;
+        $this->racks_mp = $racks_mp;
 
         return $this;
     }
@@ -391,19 +391,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getOrgFca()
+    public function getOrgMp()
     {
-        return $this->org_fca;
+        return $this->org_mp;
     }
 
     /**
-     * @param mixed $org_fca
+     * @param mixed $org_mp
      *
      * @return self
      */
-    public function setOrgFca($org_fca)
+    public function setOrgMp($org_mp)
     {
-        $this->org_fca = $org_fca;
+        $this->org_mp = $org_mp;
 
         return $this;
     }
@@ -451,19 +451,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getLuminFca()
+    public function getLuminMp()
     {
-        return $this->lumin_fca;
+        return $this->lumin_mp;
     }
 
     /**
-     * @param mixed $lumin_fca
+     * @param mixed $lumin_mp
      *
      * @return self
      */
-    public function setLuminFca($lumin_fca)
+    public function setLuminMp($lumin_mp)
     {
-        $this->lumin_fca = $lumin_fca;
+        $this->lumin_mp = $lumin_mp;
 
         return $this;
     }
@@ -511,19 +511,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getInfraFca()
+    public function getInfraMp()
     {
-        return $this->infra_fca;
+        return $this->infra_mp;
     }
 
     /**
-     * @param mixed $infra_fca
+     * @param mixed $infra_mp
      *
      * @return self
      */
-    public function setInfraFca($infra_fca)
+    public function setInfraMp($infra_mp)
     {
-        $this->infra_fca = $infra_fca;
+        $this->infra_mp = $infra_mp;
 
         return $this;
     }
@@ -571,19 +571,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getAcessoFca()
+    public function getAcessoMp()
     {
-        return $this->acesso_fca;
+        return $this->acesso_mp;
     }
 
     /**
-     * @param mixed $acesso_fca
+     * @param mixed $acesso_mp
      *
      * @return self
      */
-    public function setAcessoFca($acesso_fca)
+    public function setAcessoMp($acesso_mp)
     {
-        $this->acesso_fca = $acesso_fca;
+        $this->acesso_mp = $acesso_mp;
 
         return $this;
     }
@@ -631,19 +631,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getPortacfFca()
+    public function getPortacfMp()
     {
-        return $this->portacf_fca;
+        return $this->portacf_mp;
     }
 
     /**
-     * @param mixed $portacf_fca
+     * @param mixed $portacf_mp
      *
      * @return self
      */
-    public function setPortacfFca($portacf_fca)
+    public function setPortacfMp($portacf_mp)
     {
-        $this->portacf_fca = $portacf_fca;
+        $this->portacf_mp = $portacf_mp;
 
         return $this;
     }
@@ -671,19 +671,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getArcFca()
+    public function getArcMp()
     {
-        return $this->arc_fca;
+        return $this->arc_mp;
     }
 
     /**
-     * @param mixed $arc_fca
+     * @param mixed $arc_mp
      *
      * @return self
      */
-    public function setArcFca($arc_fca)
+    public function setArcMp($arc_mp)
     {
-        $this->arc_fca = $arc_fca;
+        $this->arc_mp = $arc_mp;
 
         return $this;
     }
@@ -731,19 +731,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getSistExtintFca()
+    public function getSistExtintMp()
     {
-        return $this->sist_extint_fca;
+        return $this->sist_extint_mp;
     }
 
     /**
-     * @param mixed $sist_extint_fca
+     * @param mixed $sist_extint_mp
      *
      * @return self
      */
-    public function setSistExtintFca($sist_extint_fca)
+    public function setSistExtintMp($sist_extint_mp)
     {
-        $this->sist_extint_fca = $sist_extint_fca;
+        $this->sist_extint_mp = $sist_extint_mp;
 
         return $this;
     }
@@ -791,19 +791,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getLedsaudeFca()
+    public function getLedsaudeMp()
     {
-        return $this->ledsaude_fca;
+        return $this->ledsaude_mp;
     }
 
     /**
-     * @param mixed $ledsaude_fca
+     * @param mixed $ledsaude_mp
      *
      * @return self
      */
-    public function setLedsaudeFca($ledsaude_fca)
+    public function setLedsaudeMp($ledsaude_mp)
     {
-        $this->ledsaude_fca = $ledsaude_fca;
+        $this->ledsaude_mp = $ledsaude_mp;
 
         return $this;
     }
@@ -811,19 +811,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getTemp01Fca()
+    public function getTemp01Mp()
     {
-        return $this->temp01_fca;
+        return $this->temp01_mp;
     }
 
     /**
-     * @param mixed $temp01_fca
+     * @param mixed $temp01_mp
      *
      * @return self
      */
-    public function setTemp01Fca($temp01_fca)
+    public function setTemp01Mp($temp01_mp)
     {
-        $this->temp01_fca = $temp01_fca;
+        $this->temp01_mp = $temp01_mp;
 
         return $this;
     }
@@ -831,19 +831,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getHumid01Fca()
+    public function getHumid01Mp()
     {
-        return $this->humid01_fca;
+        return $this->humid01_mp;
     }
 
     /**
-     * @param mixed $humid01_fca
+     * @param mixed $humid01_mp
      *
      * @return self
      */
-    public function setHumid01Fca($humid01_fca)
+    public function setHumid01Mp($humid01_mp)
     {
-        $this->humid01_fca = $humid01_fca;
+        $this->humid01_mp = $humid01_mp;
 
         return $this;
     }
@@ -891,19 +891,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getTemp02Fca()
+    public function getTemp02Mp()
     {
-        return $this->temp02_fca;
+        return $this->temp02_mp;
     }
 
     /**
-     * @param mixed $temp02_fca
+     * @param mixed $temp02_mp
      *
      * @return self
      */
-    public function setTemp02Fca($temp02_fca)
+    public function setTemp02Mp($temp02_mp)
     {
-        $this->temp02_fca = $temp02_fca;
+        $this->temp02_mp = $temp02_mp;
 
         return $this;
     }
@@ -911,19 +911,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getHumid02Fca()
+    public function getHumid02Mp()
     {
-        return $this->humid02_fca;
+        return $this->humid02_mp;
     }
 
     /**
-     * @param mixed $humid02_fca
+     * @param mixed $humid02_mp
      *
      * @return self
      */
-    public function setHumid02Fca($humid02_fca)
+    public function setHumid02Mp($humid02_mp)
     {
-        $this->humid02_fca = $humid02_fca;
+        $this->humid02_mp = $humid02_mp;
 
         return $this;
     }
@@ -971,19 +971,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getTemp03Fca()
+    public function getTemp03Mp()
     {
-        return $this->temp03_fca;
+        return $this->temp03_mp;
     }
 
     /**
-     * @param mixed $temp03_fca
+     * @param mixed $temp03_mp
      *
      * @return self
      */
-    public function setTemp03Fca($temp03_fca)
+    public function setTemp03Mp($temp03_mp)
     {
-        $this->temp03_fca = $temp03_fca;
+        $this->temp03_mp = $temp03_mp;
 
         return $this;
     }
@@ -991,19 +991,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getHumid03Fca()
+    public function getHumid03Mp()
     {
-        return $this->humid03_fca;
+        return $this->humid03_mp;
     }
 
     /**
-     * @param mixed $humid03_fca
+     * @param mixed $humid03_mp
      *
      * @return self
      */
-    public function setHumid03Fca($humid03_fca)
+    public function setHumid03Mp($humid03_mp)
     {
-        $this->humid03_fca = $humid03_fca;
+        $this->humid03_mp = $humid03_mp;
 
         return $this;
     }
@@ -1071,19 +1071,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getLuminScFca()
+    public function getLuminScMp()
     {
-        return $this->lumin_sc_fca;
+        return $this->lumin_sc_mp;
     }
 
     /**
-     * @param mixed $lumin_sc_fca
+     * @param mixed $lumin_sc_mp
      *
      * @return self
      */
-    public function setLuminScFca($lumin_sc_fca)
+    public function setLuminScMp($lumin_sc_mp)
     {
-        $this->lumin_sc_fca = $lumin_sc_fca;
+        $this->lumin_sc_mp = $lumin_sc_mp;
 
         return $this;
     }
@@ -1091,19 +1091,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getPortacfScFca()
+    public function getPortacfScMp()
     {
-        return $this->portacf_sc_fca;
+        return $this->portacf_sc_mp;
     }
 
     /**
-     * @param mixed $portacf_sc_fca
+     * @param mixed $portacf_sc_mp
      *
      * @return self
      */
-    public function setPortacfScFca($portacf_sc_fca)
+    public function setPortacfScMp($portacf_sc_mp)
     {
-        $this->portacf_sc_fca = $portacf_sc_fca;
+        $this->portacf_sc_mp = $portacf_sc_mp;
 
         return $this;
     }
@@ -1111,19 +1111,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getAcessoScFca()
+    public function getAcessoScMp()
     {
-        return $this->acesso_sc_fca;
+        return $this->acesso_sc_mp;
     }
 
     /**
-     * @param mixed $acesso_sc_fca
+     * @param mixed $acesso_sc_mp
      *
      * @return self
      */
-    public function setAcessoScFca($acesso_sc_fca)
+    public function setAcessoScMp($acesso_sc_mp)
     {
-        $this->acesso_sc_fca = $acesso_sc_fca;
+        $this->acesso_sc_mp = $acesso_sc_mp;
 
         return $this;
     }
@@ -1131,19 +1131,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getGeradoresFca()
+    public function getGeradoresMp()
     {
-        return $this->geradores_fca;
+        return $this->geradores_mp;
     }
 
     /**
-     * @param mixed $geradores_fca
+     * @param mixed $geradores_mp
      *
      * @return self
      */
-    public function setGeradoresFca($geradores_fca)
+    public function setGeradoresMp($geradores_mp)
     {
-        $this->geradores_fca = $geradores_fca;
+        $this->geradores_mp = $geradores_mp;
 
         return $this;
     }
@@ -1171,19 +1171,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getOrgExtFca()
+    public function getOrgExtMp()
     {
-        return $this->org_ext_fca;
+        return $this->org_ext_mp;
     }
 
     /**
-     * @param mixed $org_ext_fca
+     * @param mixed $org_ext_mp
      *
      * @return self
      */
-    public function setOrgExtFca($org_ext_fca)
+    public function setOrgExtMp($org_ext_mp)
     {
-        $this->org_ext_fca = $org_ext_fca;
+        $this->org_ext_mp = $org_ext_mp;
 
         return $this;
     }
@@ -1251,19 +1251,19 @@ class Checklist{
     /**
      * @return mixed
      */
-    public function getObsFca()
+    public function getObsMp()
     {
-        return $this->obs_fca;
+        return $this->obs_mp;
     }
 
     /**
-     * @param mixed $obs_fca
+     * @param mixed $obs_mp
      *
      * @return self
      */
-    public function setObsFca($obs_fca)
+    public function setObsMp($obs_mp)
     {
-        $this->obs_fca = $obs_fca;
+        $this->obs_mp = $obs_mp;
 
         return $this;
     }
@@ -1469,17 +1469,17 @@ class Checklist{
 
 	}
 
-	public function insertCheck($turno, $data, $operador_fca, $operador_sp, $operador_tr, $entrada_fca,
-                                $saida_fca, $entrada_sp, $saida_sp, $entrada_tr, $saida_tr, $racks_fca,
-                                $racks_sp, $racks_tr, $org_fca, $org_sp, $org_tr, $lumin_fca, $lumin_sp,
-                                $lumin_tr, $infra_fca, $infra_sp, $infra_tr, $acesso_fca, $acesso_sp,
-                                $acesso_tr, $portacf_fca, $portacf_sp, $arc_fca, $arc_sp, $arc_tr,
-                                $sist_extint_fca, $sist_extint_sp, $sist_extint_tr, $ledsaude_fca,
-                                $temp01_fca, $humid01_fca, $temp01_sp, $humid01_sp, $temp02_fca,
-                                $humid02_fca, $temp02_sp, $humid02_sp, $temp03_fca, $humid03_fca,
-                                $temp03_sp, $humid03_sp, $cap_ups_tr, $lumin_sc_fca, $portacf_sc_fca,
-                                $acesso_sc_fca, $geradores_fca, $geradores_sp, $org_ext_fca, $org_ext_sp,
-                                $org_ext_tr, $zabbix, $obs_fca, $obs_sp, $obs_tr, $chk_carro, $chk_sala,
+	public function insertCheck($turno, $data, $operador_mp, $operador_sp, $operador_tr, $entrada_mp,
+                                $saida_mp, $entrada_sp, $saida_sp, $entrada_tr, $saida_tr, $racks_mp,
+                                $racks_sp, $racks_tr, $org_mp, $org_sp, $org_tr, $lumin_mp, $lumin_sp,
+                                $lumin_tr, $infra_mp, $infra_sp, $infra_tr, $acesso_mp, $acesso_sp,
+                                $acesso_tr, $portacf_mp, $portacf_sp, $arc_mp, $arc_sp, $arc_tr,
+                                $sist_extint_mp, $sist_extint_sp, $sist_extint_tr, $ledsaude_mp,
+                                $temp01_mp, $humid01_mp, $temp01_sp, $humid01_sp, $temp02_mp,
+                                $humid02_mp, $temp02_sp, $humid02_sp, $temp03_mp, $humid03_mp,
+                                $temp03_sp, $humid03_sp, $cap_ups_tr, $lumin_sc_mp, $portacf_sc_mp,
+                                $acesso_sc_mp, $geradores_mp, $geradores_sp, $org_ext_mp, $org_ext_sp,
+                                $org_ext_tr, $zabbix, $obs_mp, $obs_sp, $obs_tr, $chk_carro, $chk_sala,
                                 $chk_not, $chk_cel, $chk_batcel, $obs_npo, 
                                 $operador_dr, $entrada_dr, $saida_dr, $racks_dr, $org_dr, $lumin_dr, $infra_dr,
                                 $acesso_dr, $portacf_dr, $arc_dr, $sist_extint_dr, $ledsaude_dr, $temp_dr,
@@ -1491,62 +1491,62 @@ class Checklist{
                                     //echo $ledsaude_dr."<br>"; exit();
      $this->turno = $turno;
      $this->data = $data;
-     $this->operador_fca = $operador_fca;
+     $this->operador_mp = $operador_mp;
      $this->operador_sp = $operador_sp;
      $this->operador_tr = $operador_tr;
-     $this->entrada_fca = $entrada_fca;
-     $this->saida_fca = $saida_fca;
+     $this->entrada_mp = $entrada_mp;
+     $this->saida_mp = $saida_mp;
      $this->entrada_sp = $entrada_sp;
      $this->saida_sp = $saida_sp;
      $this->entrada_tr = $entrada_tr;
      $this->saida_tr = $saida_tr;
-     $this->racks_fca = $racks_fca;
+     $this->racks_mp = $racks_mp;
      $this->racks_sp = $racks_sp;
      $this->racks_tr = $racks_tr;
-     $this->org_fca = $org_fca;
+     $this->org_mp = $org_mp;
      $this->org_sp = $org_sp;
      $this->org_tr = $org_tr;
-     $this->lumin_fca = $lumin_fca;
+     $this->lumin_mp = $lumin_mp;
      $this->lumin_sp = $lumin_sp;
      $this->lumin_tr = $lumin_tr;
-     $this->infra_fca = $infra_fca;
+     $this->infra_mp = $infra_mp;
      $this->infra_sp = $infra_sp;
      $this->infra_tr = $infra_tr;
-     $this->acesso_fca = $acesso_fca;
+     $this->acesso_mp = $acesso_mp;
      $this->acesso_sp = $acesso_sp;
      $this->acesso_tr = $acesso_tr;
-     $this->portacf_fca = $portacf_fca;
+     $this->portacf_mp = $portacf_mp;
      $this->portacf_sp = $portacf_sp;
-     $this->arc_fca = $arc_fca;
+     $this->arc_mp = $arc_mp;
      $this->arc_sp = $arc_sp;
      $this->arc_tr = $arc_tr;
-     $this->sist_extint_fca = $sist_extint_fca;
+     $this->sist_extint_mp = $sist_extint_mp;
      $this->sist_extint_sp = $sist_extint_sp;
      $this->sist_extint_tr = $sist_extint_tr;
-     $this->ledsaude_fca = $ledsaude_fca;
-     $this->temp01_fca = $temp01_fca;
-     $this->humid01_fca = $humid01_fca;
+     $this->ledsaude_mp = $ledsaude_mp;
+     $this->temp01_mp = $temp01_mp;
+     $this->humid01_mp = $humid01_mp;
      $this->temp01_sp = $temp01_sp;
      $this->humid01_sp = $humid01_sp;
-     $this->temp02_fca = $temp02_fca;
-     $this->humid02_fca = $humid02_fca;
+     $this->temp02_mp = $temp02_mp;
+     $this->humid02_mp = $humid02_mp;
      $this->temp02_sp = $temp02_sp;
      $this->humid02_sp = $humid02_sp;
-     $this->temp03_fca = $temp03_fca;
-     $this->humid03_fca = $humid03_fca;
+     $this->temp03_mp = $temp03_mp;
+     $this->humid03_mp = $humid03_mp;
      $this->temp03_sp = $temp03_sp;
      $this->humid03_sp = $humid03_sp;
      $this->cap_ups_tr = $cap_ups_tr;
-     $this->lumin_sc_fca = $lumin_sc_fca;
-     $this->portacf_sc_fca = $portacf_sc_fca;
-     $this->acesso_sc_fca = $acesso_sc_fca;
-     $this->geradores_fca = $geradores_fca;
+     $this->lumin_sc_mp = $lumin_sc_mp;
+     $this->portacf_sc_mp = $portacf_sc_mp;
+     $this->acesso_sc_mp = $acesso_sc_mp;
+     $this->geradores_mp = $geradores_mp;
      $this->geradores_sp = $geradores_sp;
-     $this->org_ext_fca = $org_ext_fca;
+     $this->org_ext_mp = $org_ext_mp;
      $this->org_ext_sp = $org_ext_sp;
      $this->org_ext_tr = $org_ext_tr;
      $this->zabbix = $zabbix;
-     $this->obs_fca = $obs_fca;
+     $this->obs_mp = $obs_mp;
      $this->obs_sp = $obs_sp;
      $this->obs_tr =$obs_tr;
      $this->chk_carro = $chk_carro;
@@ -1573,67 +1573,67 @@ class Checklist{
      $this->obs_dr = $obs_dr;
 
      /*
-	$sql = "INSERT INTO `checklists` (`turno`, `data`, `operador_fca`, `operador_sp`, `operador_tr`, `entrada_fca`, `saida_fca`, `entrada_sp`, `saida_sp`, `entrada_tr`, `saida_tr`, `racks_fca`, `racks_sp`, `racks_tr`, `org_fca`, `org_sp`, `org_tr`, `lumin_fca`, `lumin_sp`, `lumin_tr`, `infra_fca`, `infra_sp`, `infra_tr`, `acesso_fca`, `acesso_sp`, `acesso_tr`, `portacf_fca`, `portacf_sp`, `arc_fca`, `arc_sp`, `arc_tr`, `sist_extint_fca`, `sist_extint_sp`, `sist_extint_tr`, `ledsaude_fca`, `temp01_fca`, `humid01_fca`, `temp02_fca`, `humid02_fca`, `temp03_fca`, `humid03_fca`, `temp01_sp`, `humid01_sp`, `temp02_sp`, `humid02_sp`, `temp03_sp`, `humid03_sp`, `cap_ups_tr`, `lumin_sc_fca`, `portacf_sc_fca`, `acesso_sc_fca`, `geradores_fca`, `geradores_sp`, `org_ext_fca`, `org_ext_sp`, `org_ext_tr`, `zabbix`, `obs_fca`, `obs_sp`, `obs_tr`, `chk_carro`, `chk_sala`, `chk_not`, `chk_cel`, `chk_batcel`, `obs_npo`,
+	$sql = "INSERT INTO `checklists` (`turno`, `data`, `operador_mp`, `operador_sp`, `operador_tr`, `entrada_mp`, `saida_mp`, `entrada_sp`, `saida_sp`, `entrada_tr`, `saida_tr`, `racks_mp`, `racks_sp`, `racks_tr`, `org_mp`, `org_sp`, `org_tr`, `lumin_mp`, `lumin_sp`, `lumin_tr`, `infra_mp`, `infra_sp`, `infra_tr`, `acesso_mp`, `acesso_sp`, `acesso_tr`, `portacf_mp`, `portacf_sp`, `arc_mp`, `arc_sp`, `arc_tr`, `sist_extint_mp`, `sist_extint_sp`, `sist_extint_tr`, `ledsaude_mp`, `temp01_mp`, `humid01_mp`, `temp02_mp`, `humid02_mp`, `temp03_mp`, `humid03_mp`, `temp01_sp`, `humid01_sp`, `temp02_sp`, `humid02_sp`, `temp03_sp`, `humid03_sp`, `cap_ups_tr`, `lumin_sc_mp`, `portacf_sc_mp`, `acesso_sc_mp`, `geradores_mp`, `geradores_sp`, `org_ext_mp`, `org_ext_sp`, `org_ext_tr`, `zabbix`, `obs_mp`, `obs_sp`, `obs_tr`, `chk_carro`, `chk_sala`, `chk_not`, `chk_cel`, `chk_batcel`, `obs_npo`,
     `operador_dr`, `entrada_dr`, `saida_dr`, `racks_dr`, `org_dr`, `lumin_dr`, `infra_dr`, `acesso_dr`, `portacf_dr`, `arc_dr`,
     `sist_extint_dr`, `ledsaude_dr`, `temp_dr`, `humid_dr`, `org_ext_dr`, `obs_dr`) VALUES (
         '$this->turno',
         '$this->data',
-        '$this->operador_fca',
+        '$this->operador_mp',
         '$this->operador_sp',
         '$this->operador_tr',
-        '$this->entrada_fca',
-        '$this->saida_fca',
+        '$this->entrada_mp',
+        '$this->saida_mp',
         '$this->entrada_sp',
         '$this->saida_sp',
         '$this->entrada_tr',
         '$this->saida_tr',
-        '$this->racks_fca',
+        '$this->racks_mp',
         '$this->racks_sp',
         '$this->racks_tr',
-        '$this->org_fca',
+        '$this->org_mp',
         '$this->org_sp',
         '$this->org_tr',
-        '$this->lumin_fca',
+        '$this->lumin_mp',
         '$this->lumin_sp',
         '$this->lumin_tr',
-        '$this->infra_fca',
+        '$this->infra_mp',
         '$this->infra_sp',
         '$this->infra_tr',
-        '$this->acesso_fca',
+        '$this->acesso_mp',
         '$this->acesso_sp',
         '$this->acesso_tr',
-        '$this->portacf_fca',
+        '$this->portacf_mp',
         '$this->portacf_sp',
-        '$this->arc_fca',
+        '$this->arc_mp',
         '$this->arc_sp',
         '$this->arc_tr',
-        '$this->sist_extint_fca',
+        '$this->sist_extint_mp',
         '$this->sist_extint_sp',
         '$this->sist_extint_tr',
-        '$this->ledsaude_fca',
-        '$this->temp01_fca',
-        '$this->humid01_fca',
+        '$this->ledsaude_mp',
+        '$this->temp01_mp',
+        '$this->humid01_mp',
         '$this->temp01_sp',
         '$this->humid01_sp',
-        '$this->temp02_fca',
-        '$this->humid02_fca',
+        '$this->temp02_mp',
+        '$this->humid02_mp',
         '$this->temp02_sp',
         '$this->humid02_sp',
-        '$this->temp03_fca',
-        '$this->humid03_fca',
+        '$this->temp03_mp',
+        '$this->humid03_mp',
         '$this->temp03_sp',
         '$this->humid03_sp',
         '$this->cap_ups_tr',
-        '$this->lumin_sc_fca',
-        '$this->portacf_sc_fca',
-        '$this->acesso_sc_fca',
-        '$this->geradores_fca',
+        '$this->lumin_sc_mp',
+        '$this->portacf_sc_mp',
+        '$this->acesso_sc_mp',
+        '$this->geradores_mp',
         '$this->geradores_sp',
-        '$this->org_ext_fca',
+        '$this->org_ext_mp',
         '$this->org_ext_sp',
         '$this->org_ext_tr',
         '$this->zabbix',
-        '$this->obs_fca',
+        '$this->obs_mp',
         '$this->obs_sp',
         '$this->obs_tr',
         '$this->chk_carro',
@@ -1680,29 +1680,29 @@ class Checklist{
                                     */
         /** Novos testes */
 
-        $sql = "INSERT INTO checklists (turno, data, operador_fca, operador_sp, operador_dr, operador_tr,
-        entrada_fca, saida_fca, entrada_sp, saida_sp, entrada_dr, saida_dr, entrada_tr, saida_tr, racks_fca,
-        racks_sp, racks_dr, racks_tr, org_fca, org_sp, org_dr, org_tr, lumin_fca, lumin_sp, lumin_dr,
-        lumin_tr, infra_fca, infra_sp, infra_dr, infra_tr, acesso_fca, acesso_sp, acesso_dr, acesso_tr,
-        portacf_fca, portacf_sp, portacf_dr, arc_fca, arc_sp, arc_dr, arc_tr, sist_extint_fca, sist_extint_sp,
-        sist_extint_dr, sist_extint_tr, ledsaude_fca, ledsaude_dr, temp01_fca, humid01_fca, temp02_fca,
-        humid02_fca, temp03_fca, humid03_fca, temp01_sp, humid01_sp, temp02_sp, humid02_sp, temp03_sp,
-        humid03_sp, temp_dr, humid_dr, cap_ups_tr, lumin_sc_fca, portacf_sc_fca, acesso_sc_fca, geradores_fca,
-        geradores_sp, org_ext_fca, org_ext_sp, org_ext_dr, org_ext_tr, zabbix, obs_fca, obs_sp, obs_dr,
+        $sql = "INSERT INTO checklists (turno, data, operador_mp, operador_sp, operador_dr, operador_tr,
+        entrada_mp, saida_mp, entrada_sp, saida_sp, entrada_dr, saida_dr, entrada_tr, saida_tr, racks_mp,
+        racks_sp, racks_dr, racks_tr, org_mp, org_sp, org_dr, org_tr, lumin_mp, lumin_sp, lumin_dr,
+        lumin_tr, infra_mp, infra_sp, infra_dr, infra_tr, acesso_mp, acesso_sp, acesso_dr, acesso_tr,
+        portacf_mp, portacf_sp, portacf_dr, arc_mp, arc_sp, arc_dr, arc_tr, sist_extint_mp, sist_extint_sp,
+        sist_extint_dr, sist_extint_tr, ledsaude_mp, ledsaude_dr, temp01_mp, humid01_mp, temp02_mp,
+        humid02_mp, temp03_mp, humid03_mp, temp01_sp, humid01_sp, temp02_sp, humid02_sp, temp03_sp,
+        humid03_sp, temp_dr, humid_dr, cap_ups_tr, lumin_sc_mp, portacf_sc_mp, acesso_sc_mp, geradores_mp,
+        geradores_sp, org_ext_mp, org_ext_sp, org_ext_dr, org_ext_tr, zabbix, obs_mp, obs_sp, obs_dr,
         obs_tr, chk_carro, chk_sala, chk_not, chk_cel, chk_batcel, obs_npo) VALUES ('$this->turno', '$this->data',
-        '$this->operador_fca', '$this->operador_sp', '$this->operador_dr', '$this->operador_tr', '$this->entrada_fca',
-        '$this->saida_fca', '$this->entrada_sp', '$this->saida_sp', '$this->entrada_dr', '$this->saida_dr', '$this->entrada_tr',
-        '$this->saida_tr', '$this->racks_fca', '$this->racks_sp', '$this->racks_dr', '$this->racks_tr', '$this->org_fca',
-        '$this->org_sp', '$this->org_dr', '$this->org_tr', '$this->lumin_fca', '$this->lumin_sp', '$this->lumin_dr',
-        '$this->lumin_tr', '$this->infra_fca', '$this->infra_sp', '$this->infra_dr', '$this->infra_tr', '$this->acesso_fca',
-        '$this->acesso_sp', '$this->acesso_dr', '$this->acesso_tr', '$this->portacf_fca', '$this->portacf_sp', '$this->portacf_dr',
-        '$this->arc_fca', '$this->arc_sp', '$this->arc_dr', '$this->arc_tr', '$this->sist_extint_fca', '$this->sist_extint_sp',
-        '$this->sist_extint_dr', '$this->sist_extint_tr', '$this->ledsaude_fca', '$this->ledsaude_dr', '$this->temp01_fca',
-        '$this->humid01_fca', '$this->temp02_fca', '$this->humid02_fca', '$this->temp03_fca', '$this->humid03_fca',
+        '$this->operador_mp', '$this->operador_sp', '$this->operador_dr', '$this->operador_tr', '$this->entrada_mp',
+        '$this->saida_mp', '$this->entrada_sp', '$this->saida_sp', '$this->entrada_dr', '$this->saida_dr', '$this->entrada_tr',
+        '$this->saida_tr', '$this->racks_mp', '$this->racks_sp', '$this->racks_dr', '$this->racks_tr', '$this->org_mp',
+        '$this->org_sp', '$this->org_dr', '$this->org_tr', '$this->lumin_mp', '$this->lumin_sp', '$this->lumin_dr',
+        '$this->lumin_tr', '$this->infra_mp', '$this->infra_sp', '$this->infra_dr', '$this->infra_tr', '$this->acesso_mp',
+        '$this->acesso_sp', '$this->acesso_dr', '$this->acesso_tr', '$this->portacf_mp', '$this->portacf_sp', '$this->portacf_dr',
+        '$this->arc_mp', '$this->arc_sp', '$this->arc_dr', '$this->arc_tr', '$this->sist_extint_mp', '$this->sist_extint_sp',
+        '$this->sist_extint_dr', '$this->sist_extint_tr', '$this->ledsaude_mp', '$this->ledsaude_dr', '$this->temp01_mp',
+        '$this->humid01_mp', '$this->temp02_mp', '$this->humid02_mp', '$this->temp03_mp', '$this->humid03_mp',
         '$this->temp01_sp', '$this->humid01_sp', '$this->temp02_sp', '$this->humid02_sp', '$this->temp03_sp',
-        '$this->humid03_sp', '$this->temp_dr', '$this->humid_dr', '$this->cap_ups_tr', '$this->lumin_sc_fca',
-        '$this->portacf_sc_fca', '$this->acesso_sc_fca', '$this->geradores_fca', '$this->geradores_sp', '$this->org_ext_fca',
-        '$this->org_ext_sp', '$this->org_ext_dr', '$this->org_ext_tr', '$this->zabbix', '$this->obs_fca', '$this->obs_sp',
+        '$this->humid03_sp', '$this->temp_dr', '$this->humid_dr', '$this->cap_ups_tr', '$this->lumin_sc_mp',
+        '$this->portacf_sc_mp', '$this->acesso_sc_mp', '$this->geradores_mp', '$this->geradores_sp', '$this->org_ext_mp',
+        '$this->org_ext_sp', '$this->org_ext_dr', '$this->org_ext_tr', '$this->zabbix', '$this->obs_mp', '$this->obs_sp',
         '$this->obs_dr', '$this->obs_tr', '$this->chk_carro', '$this->chk_sala', '$this->chk_not', '$this->chk_cel',
         '$this->chk_batcel', '$this->obs_npo')";
 
@@ -1714,17 +1714,17 @@ class Checklist{
         return true;
 	}
 
-    public function editCheck($i, $turno, $data, $operador_fca, $operador_sp, $operador_tr, $entrada_fca,
-                                $saida_fca, $entrada_sp, $saida_sp, $entrada_tr, $saida_tr, $racks_fca,
-                                $racks_sp, $racks_tr, $org_fca, $org_sp, $org_tr, $lumin_fca, $lumin_sp,
-                                $lumin_tr, $infra_fca, $infra_sp, $infra_tr, $acesso_fca, $acesso_sp,
-                                $acesso_tr, $portacf_fca, $portacf_sp, $arc_fca, $arc_sp, $arc_tr,
-                                $sist_extint_fca, $sist_extint_sp, $sist_extint_tr, $ledsaude_fca,
-                                $temp01_fca, $humid01_fca, $temp01_sp, $humid01_sp, $temp02_fca,
-                                $humid02_fca, $temp02_sp, $humid02_sp, $temp03_fca, $humid03_fca,
-                                $temp03_sp, $humid03_sp, $cap_ups_tr, $lumin_sc_fca, $portacf_sc_fca,
-                                $acesso_sc_fca, $geradores_fca, $geradores_sp, $org_ext_fca, $org_ext_sp,
-                                $org_ext_tr, $zabbix, $obs_fca, $obs_sp, $obs_tr, $chk_carro, $chk_sala,
+    public function editCheck($i, $turno, $data, $operador_mp, $operador_sp, $operador_tr, $entrada_mp,
+                                $saida_mp, $entrada_sp, $saida_sp, $entrada_tr, $saida_tr, $racks_mp,
+                                $racks_sp, $racks_tr, $org_mp, $org_sp, $org_tr, $lumin_mp, $lumin_sp,
+                                $lumin_tr, $infra_mp, $infra_sp, $infra_tr, $acesso_mp, $acesso_sp,
+                                $acesso_tr, $portacf_mp, $portacf_sp, $arc_mp, $arc_sp, $arc_tr,
+                                $sist_extint_mp, $sist_extint_sp, $sist_extint_tr, $ledsaude_mp,
+                                $temp01_mp, $humid01_mp, $temp01_sp, $humid01_sp, $temp02_mp,
+                                $humid02_mp, $temp02_sp, $humid02_sp, $temp03_mp, $humid03_mp,
+                                $temp03_sp, $humid03_sp, $cap_ups_tr, $lumin_sc_mp, $portacf_sc_mp,
+                                $acesso_sc_mp, $geradores_mp, $geradores_sp, $org_ext_mp, $org_ext_sp,
+                                $org_ext_tr, $zabbix, $obs_mp, $obs_sp, $obs_tr, $chk_carro, $chk_sala,
                                 $chk_not, $chk_cel, $chk_batcel, $obs_npo,
                                 $operador_dr, $entrada_dr, $saida_dr, $racks_dr, $org_dr, $lumin_dr, $infra_dr,
                                 $acesso_dr, $portacf_dr, $arc_dr, $sist_extint_dr, $ledsaude_dr, $temp_dr,
@@ -1733,62 +1733,62 @@ class Checklist{
      $this->id = $i;
      $this->turno = $turno;
      $this->data = $data;
-     $this->operador_fca = $operador_fca;
+     $this->operador_mp = $operador_mp;
      $this->operador_sp = $operador_sp;
      $this->operador_tr = $operador_tr;
-     $this->entrada_fca = $entrada_fca;
-     $this->saida_fca = $saida_fca;
+     $this->entrada_mp = $entrada_mp;
+     $this->saida_mp = $saida_mp;
      $this->entrada_sp = $entrada_sp;
      $this->saida_sp = $saida_sp;
      $this->entrada_tr = $entrada_tr;
      $this->saida_tr = $saida_tr;
-     $this->racks_fca = $racks_fca;
+     $this->racks_mp = $racks_mp;
      $this->racks_sp = $racks_sp;
      $this->racks_tr = $racks_tr;
-     $this->org_fca = $org_fca;
+     $this->org_mp = $org_mp;
      $this->org_sp = $org_sp;
      $this->org_tr = $org_tr;
-     $this->lumin_fca = $lumin_fca;
+     $this->lumin_mp = $lumin_mp;
      $this->lumin_sp = $lumin_sp;
      $this->lumin_tr = $lumin_tr;
-     $this->infra_fca = $infra_fca;
+     $this->infra_mp = $infra_mp;
      $this->infra_sp = $infra_sp;
      $this->infra_tr = $infra_tr;
-     $this->acesso_fca = $acesso_fca;
+     $this->acesso_mp = $acesso_mp;
      $this->acesso_sp = $acesso_sp;
      $this->acesso_tr = $acesso_tr;
-     $this->portacf_fca = $portacf_fca;
+     $this->portacf_mp = $portacf_mp;
      $this->portacf_sp = $portacf_sp;
-     $this->arc_fca = $arc_fca;
+     $this->arc_mp = $arc_mp;
      $this->arc_sp = $arc_sp;
      $this->arc_tr = $arc_tr;
-     $this->sist_extint_fca = $sist_extint_fca;
+     $this->sist_extint_mp = $sist_extint_mp;
      $this->sist_extint_sp = $sist_extint_sp;
      $this->sist_extint_tr = $sist_extint_tr;
-     $this->ledsaude_fca = $ledsaude_fca;
-     $this->temp01_fca = $temp01_fca;
-     $this->humid01_fca = $humid01_fca;
+     $this->ledsaude_mp = $ledsaude_mp;
+     $this->temp01_mp = $temp01_mp;
+     $this->humid01_mp = $humid01_mp;
      $this->temp01_sp = $temp01_sp;
      $this->humid01_sp = $humid01_sp;
-     $this->temp02_fca = $temp02_fca;
-     $this->humid02_fca = $humid02_fca;
+     $this->temp02_mp = $temp02_mp;
+     $this->humid02_mp = $humid02_mp;
      $this->temp02_sp = $temp02_sp;
      $this->humid02_sp = $humid02_sp;
-     $this->temp03_fca = $temp03_fca;
-     $this->humid03_fca = $humid03_fca;
+     $this->temp03_mp = $temp03_mp;
+     $this->humid03_mp = $humid03_mp;
      $this->temp03_sp = $temp03_sp;
      $this->humid03_sp = $humid03_sp;
      $this->cap_ups_tr = $cap_ups_tr;
-     $this->lumin_sc_fca = $lumin_sc_fca;
-     $this->portacf_sc_fca = $portacf_sc_fca;
-     $this->acesso_sc_fca = $acesso_sc_fca;
-     $this->geradores_fca = $geradores_fca;
+     $this->lumin_sc_mp = $lumin_sc_mp;
+     $this->portacf_sc_mp = $portacf_sc_mp;
+     $this->acesso_sc_mp = $acesso_sc_mp;
+     $this->geradores_mp = $geradores_mp;
      $this->geradores_sp = $geradores_sp;
-     $this->org_ext_fca = $org_ext_fca;
+     $this->org_ext_mp = $org_ext_mp;
      $this->org_ext_sp = $org_ext_sp;
      $this->org_ext_tr = $org_ext_tr;
      $this->zabbix = $zabbix;
-     $this->obs_fca = $obs_fca;
+     $this->obs_mp = $obs_mp;
      $this->obs_sp = $obs_sp;
      $this->obs_tr =$obs_tr;
      $this->chk_carro = $chk_carro;
@@ -1833,65 +1833,65 @@ class Checklist{
                                     */
 
 
-     //$sql = "UPDATE `checklists` SET id = '$this->id', turno = '$this->turno', data = '$this->data', operador_fca = '$this->operador_fca', operador_sp = '$this->operador_sp', operador_tr = '$this->operador_tr', entrada_fca = '$this->entrada_fca', saida_fca = '$this->saida_fca', entrada_sp = '$this->entrada_sp', saida_sp = '$this->saida_sp', entrada_tr = '$this->entrada_tr', saida_tr = '$this->saida_tr', racks_fca = '$this->racks_fca', racks_sp = '$this->racks_sp', racks_tr = '$this->racks_tr', org_fca = '$this->org_fca', org_sp = '$this->org_sp', org_tr = '$this->org_tr', lumin_fca = '$this->lumin_fca', lumin_sp = '$this->lumin_sp', lumin_tr = '$this->lumin_tr', infra_fca = '$this->infra_fca', infra_sp = '$this->infra_sp', infra_tr = '$this->infra_tr', acesso_fca = '$this->acesso_fca', acesso_sp = '$this->acesso_sp', acesso_tr = '$this->acesso_tr', portacf_fca = '$this->portacf_fca', portacf_sp = '$this->portacf_sp', arc_fca = '$this->arc_fca', arc_sp = '$this->arc_sp', arc_tr = '$this->arc_tr', sist_extint_fca = '$this->sist_extint_fca', sist_extint_sp = '$this->sist_extint_sp', sist_extint_tr = '$this->sist_extint_tr', ledsaude_fca = '$this->ledsaude_fca', temp01_fca = '$this->temp01_fca', humid01_fca = '$this->humid01_fca', temp02_fca = '$this->temp02_fca', humid02_fca = '$this->humid02_fca', temp03_fca = '$this->temp03_fca', humid03_fca = '$this->humid03_fca', temp01_sp = '$this->temp01_sp', humid01_sp = '$this->humid01_sp', temp02_sp = '$this->temp02_sp', humid02_sp = '$this->humid02_sp', temp03_sp = '$this->temp03_sp', humid03_sp = '$this->humid03_sp', cap_ups_tr = '$this->cap_ups_tr', lumin_sc_fca = '$this->lumin_sc_fca', portacf_sc_fca = '$this->portacf_sc_fca', acesso_sc_fca = '$this->acesso_sc_fca', geradores_fca = '$this->geradores_fca', geradores_sp = '$this->geradores_sp', org_ext_fca = '$this->org_ext_fca', org_ext_sp = '$this->org_ext_sp', org_ext_tr = '$this->org_ext_tr', zabbix = '$this->zabbix', obs_fca = '$this->obs_fca', obs_sp = '$this->obs_sp', obs_tr = '$this->obs_tr', chk_carro = '$this->chk_carro', chk_sala = '$this->chk_sala', chk_not = '$this->chk_not', chk_cel = '$this->chk_cel', chk_batcel = '$this->chk_batcel', obs_npo = '$this->obs_npo' WHERE id = '$this->id'";
-     //$sql = "UPDATE `checklists` SET turno = '$this->turno', data = '$this->data', operador_fca = '$this->operador_fca', operador_sp = '$this->operador_sp', operador_tr = '$this->operador_tr', entrada_fca = '$this->entrada_fca', saida_fca = '$this->saida_fca', entrada_sp = '$this->entrada_sp', saida_sp = '$this->saida_sp', entrada_tr = '$this->entrada_tr', saida_tr = '$this->saida_tr', racks_fca = '$this->racks_fca', racks_sp = '$this->racks_sp', racks_tr = '$this->racks_tr', org_fca = '$this->org_fca', org_sp = '$this->org_sp', org_tr = '$this->org_tr', lumin_fca = '$this->lumin_fca', lumin_sp = '$this->lumin_sp', lumin_tr = '$this->lumin_tr', infra_fca = '$this->infra_fca', infra_sp = '$this->infra_sp', infra_tr = '$this->infra_tr', acesso_fca = '$this->acesso_fca', acesso_sp = '$this->acesso_sp', acesso_tr = '$this->acesso_tr', portacf_fca = '$this->portacf_fca', portacf_sp = '$this->portacf_sp', arc_fca = '$this->arc_fca', arc_sp = '$this->arc_sp', arc_tr = '$this->arc_tr', sist_extint_fca = '$this->sist_extint_fca', sist_extint_sp = '$this->sist_extint_sp', sist_extint_tr = '$this->sist_extint_tr', ledsaude_fca = '$this->ledsaude_fca', temp01_fca = '$this->temp01_fca', humid01_fca = '$this->humid01_fca', temp02_fca = '$this->temp02_fca', humid02_fca = '$this->humid02_fca', temp03_fca = '$this->temp03_fca', humid03_fca = '$this->humid03_fca', temp01_sp = '$this->temp01_sp', humid01_sp = '$this->humid01_sp', temp02_sp = '$this->temp02_sp', humid02_sp = '$this->humid02_sp', temp03_sp = '$this->temp03_sp', humid03_sp = '$this->humid03_sp', cap_ups_tr = '$this->cap_ups_tr', lumin_sc_fca = '$this->lumin_sc_fca', portacf_sc_fca = '$this->portacf_sc_fca', acesso_sc_fca = '$this->acesso_sc_fca', geradores_fca = '$this->geradores_fca', geradores_sp = '$this->geradores_sp', org_ext_fca = '$this->org_ext_fca', org_ext_sp = '$this->org_ext_sp', org_ext_tr = '$this->org_ext_tr', zabbix = '$this->zabbix', obs_fca = '$this->obs_fca', obs_sp = '$this->obs_sp', obs_tr = '$this->obs_tr', chk_carro = '$this->chk_carro', chk_sala = '$this->chk_sala', chk_not = '$this->chk_not', chk_cel = '$this->chk_cel', chk_batcel = '$this->chk_batcel', obs_npo = '$this->obs_npo' WHERE id = '$this->id'";
+     //$sql = "UPDATE `checklists` SET id = '$this->id', turno = '$this->turno', data = '$this->data', operador_mp = '$this->operador_mp', operador_sp = '$this->operador_sp', operador_tr = '$this->operador_tr', entrada_mp = '$this->entrada_mp', saida_mp = '$this->saida_mp', entrada_sp = '$this->entrada_sp', saida_sp = '$this->saida_sp', entrada_tr = '$this->entrada_tr', saida_tr = '$this->saida_tr', racks_mp = '$this->racks_mp', racks_sp = '$this->racks_sp', racks_tr = '$this->racks_tr', org_mp = '$this->org_mp', org_sp = '$this->org_sp', org_tr = '$this->org_tr', lumin_mp = '$this->lumin_mp', lumin_sp = '$this->lumin_sp', lumin_tr = '$this->lumin_tr', infra_mp = '$this->infra_mp', infra_sp = '$this->infra_sp', infra_tr = '$this->infra_tr', acesso_mp = '$this->acesso_mp', acesso_sp = '$this->acesso_sp', acesso_tr = '$this->acesso_tr', portacf_mp = '$this->portacf_mp', portacf_sp = '$this->portacf_sp', arc_mp = '$this->arc_mp', arc_sp = '$this->arc_sp', arc_tr = '$this->arc_tr', sist_extint_mp = '$this->sist_extint_mp', sist_extint_sp = '$this->sist_extint_sp', sist_extint_tr = '$this->sist_extint_tr', ledsaude_mp = '$this->ledsaude_mp', temp01_mp = '$this->temp01_mp', humid01_mp = '$this->humid01_mp', temp02_mp = '$this->temp02_mp', humid02_mp = '$this->humid02_mp', temp03_mp = '$this->temp03_mp', humid03_mp = '$this->humid03_mp', temp01_sp = '$this->temp01_sp', humid01_sp = '$this->humid01_sp', temp02_sp = '$this->temp02_sp', humid02_sp = '$this->humid02_sp', temp03_sp = '$this->temp03_sp', humid03_sp = '$this->humid03_sp', cap_ups_tr = '$this->cap_ups_tr', lumin_sc_mp = '$this->lumin_sc_mp', portacf_sc_mp = '$this->portacf_sc_mp', acesso_sc_mp = '$this->acesso_sc_mp', geradores_mp = '$this->geradores_mp', geradores_sp = '$this->geradores_sp', org_ext_mp = '$this->org_ext_mp', org_ext_sp = '$this->org_ext_sp', org_ext_tr = '$this->org_ext_tr', zabbix = '$this->zabbix', obs_mp = '$this->obs_mp', obs_sp = '$this->obs_sp', obs_tr = '$this->obs_tr', chk_carro = '$this->chk_carro', chk_sala = '$this->chk_sala', chk_not = '$this->chk_not', chk_cel = '$this->chk_cel', chk_batcel = '$this->chk_batcel', obs_npo = '$this->obs_npo' WHERE id = '$this->id'";
+     //$sql = "UPDATE `checklists` SET turno = '$this->turno', data = '$this->data', operador_mp = '$this->operador_mp', operador_sp = '$this->operador_sp', operador_tr = '$this->operador_tr', entrada_mp = '$this->entrada_mp', saida_mp = '$this->saida_mp', entrada_sp = '$this->entrada_sp', saida_sp = '$this->saida_sp', entrada_tr = '$this->entrada_tr', saida_tr = '$this->saida_tr', racks_mp = '$this->racks_mp', racks_sp = '$this->racks_sp', racks_tr = '$this->racks_tr', org_mp = '$this->org_mp', org_sp = '$this->org_sp', org_tr = '$this->org_tr', lumin_mp = '$this->lumin_mp', lumin_sp = '$this->lumin_sp', lumin_tr = '$this->lumin_tr', infra_mp = '$this->infra_mp', infra_sp = '$this->infra_sp', infra_tr = '$this->infra_tr', acesso_mp = '$this->acesso_mp', acesso_sp = '$this->acesso_sp', acesso_tr = '$this->acesso_tr', portacf_mp = '$this->portacf_mp', portacf_sp = '$this->portacf_sp', arc_mp = '$this->arc_mp', arc_sp = '$this->arc_sp', arc_tr = '$this->arc_tr', sist_extint_mp = '$this->sist_extint_mp', sist_extint_sp = '$this->sist_extint_sp', sist_extint_tr = '$this->sist_extint_tr', ledsaude_mp = '$this->ledsaude_mp', temp01_mp = '$this->temp01_mp', humid01_mp = '$this->humid01_mp', temp02_mp = '$this->temp02_mp', humid02_mp = '$this->humid02_mp', temp03_mp = '$this->temp03_mp', humid03_mp = '$this->humid03_mp', temp01_sp = '$this->temp01_sp', humid01_sp = '$this->humid01_sp', temp02_sp = '$this->temp02_sp', humid02_sp = '$this->humid02_sp', temp03_sp = '$this->temp03_sp', humid03_sp = '$this->humid03_sp', cap_ups_tr = '$this->cap_ups_tr', lumin_sc_mp = '$this->lumin_sc_mp', portacf_sc_mp = '$this->portacf_sc_mp', acesso_sc_mp = '$this->acesso_sc_mp', geradores_mp = '$this->geradores_mp', geradores_sp = '$this->geradores_sp', org_ext_mp = '$this->org_ext_mp', org_ext_sp = '$this->org_ext_sp', org_ext_tr = '$this->org_ext_tr', zabbix = '$this->zabbix', obs_mp = '$this->obs_mp', obs_sp = '$this->obs_sp', obs_tr = '$this->obs_tr', chk_carro = '$this->chk_carro', chk_sala = '$this->chk_sala', chk_not = '$this->chk_not', chk_cel = '$this->chk_cel', chk_batcel = '$this->chk_batcel', obs_npo = '$this->obs_npo' WHERE id = '$this->id'";
     
     $sql = "UPDATE
      `checklists`
     SET
      turno = '$this->turno',
      data = '$this->data',
-     operador_fca = '$this->operador_fca',
+     operador_mp = '$this->operador_mp',
      operador_sp = '$this->operador_sp',
      operador_dr = '$this->operador_dr',
      operador_tr = '$this->operador_tr',
-     entrada_fca = '$this->entrada_fca',
-     saida_fca = '$this->saida_fca',
+     entrada_mp = '$this->entrada_mp',
+     saida_mp = '$this->saida_mp',
      entrada_sp = '$this->entrada_sp',
      saida_sp = '$this->saida_sp',
      entrada_dr = '$this->entrada_dr',
      saida_dr = '$this->saida_dr',
      entrada_tr = '$this->entrada_tr',
      saida_tr = '$this->saida_tr',
-     racks_fca = '$this->racks_fca',
+     racks_mp = '$this->racks_mp',
      racks_sp = '$this->racks_sp',
      racks_dr = '$this->racks_dr',
      racks_tr = '$this->racks_tr',
-     org_fca = '$this->org_fca',
+     org_mp = '$this->org_mp',
      org_sp = '$this->org_sp',
      org_dr = '$this->org_dr',
      org_tr = '$this->org_tr',
-     lumin_fca = '$this->lumin_fca',
+     lumin_mp = '$this->lumin_mp',
      lumin_sp = '$this->lumin_sp',
      lumin_dr = '$this->lumin_dr',
      lumin_tr = '$this->lumin_tr',
-     infra_fca = '$this->infra_fca',
+     infra_mp = '$this->infra_mp',
      infra_sp = '$this->infra_sp',
      infra_dr = '$this->infra_dr',
      infra_tr = '$this->infra_tr',
-     acesso_fca = '$this->acesso_fca',
+     acesso_mp = '$this->acesso_mp',
      acesso_sp = '$this->acesso_sp',
      acesso_dr = '$this->acesso_dr',
      acesso_tr = '$this->acesso_tr',
-     portacf_fca = '$this->portacf_fca',
+     portacf_mp = '$this->portacf_mp',
      portacf_sp = '$this->portacf_sp',
      portacf_dr = '$this->portacf_dr',
-     arc_fca = '$this->arc_fca',
+     arc_mp = '$this->arc_mp',
      arc_sp = '$this->arc_sp',
      arc_dr = '$this->arc_dr',
      arc_tr = '$this->arc_tr',
-     sist_extint_fca = '$this->sist_extint_fca',
+     sist_extint_mp = '$this->sist_extint_mp',
      sist_extint_sp = '$this->sist_extint_sp',
      sist_extint_dr = '$this->sist_extint_dr',
      sist_extint_tr = '$this->sist_extint_tr',
-     ledsaude_fca = '$this->ledsaude_fca',
+     ledsaude_mp = '$this->ledsaude_mp',
      ledsaude_dr = '$this->ledsaude_dr',
-     temp01_fca = '$this->temp01_fca',
-     humid01_fca = '$this->humid01_fca',
-     temp02_fca = '$this->temp02_fca',
-     humid02_fca = '$this->humid02_fca',
-     temp03_fca = '$this->temp03_fca',
-     humid03_fca = '$this->humid03_fca',
+     temp01_mp = '$this->temp01_mp',
+     humid01_mp = '$this->humid01_mp',
+     temp02_mp = '$this->temp02_mp',
+     humid02_mp = '$this->humid02_mp',
+     temp03_mp = '$this->temp03_mp',
+     humid03_mp = '$this->humid03_mp',
      temp01_sp = '$this->temp01_sp',
      humid01_sp = '$this->humid01_sp',
      temp02_sp = '$this->temp02_sp',
@@ -1901,17 +1901,17 @@ class Checklist{
      temp_dr = '$this->temp_dr',
      humid_dr = '$this->humid_dr',
      cap_ups_tr = '$this->cap_ups_tr',
-     lumin_sc_fca = '$this->lumin_sc_fca',
-     portacf_sc_fca = '$this->portacf_sc_fca',
-     acesso_sc_fca = '$this->acesso_sc_fca',
-     geradores_fca = '$this->geradores_fca',
+     lumin_sc_mp = '$this->lumin_sc_mp',
+     portacf_sc_mp = '$this->portacf_sc_mp',
+     acesso_sc_mp = '$this->acesso_sc_mp',
+     geradores_mp = '$this->geradores_mp',
      geradores_sp = '$this->geradores_sp',
-     org_ext_fca = '$this->org_ext_fca',
+     org_ext_mp = '$this->org_ext_mp',
      org_ext_sp = '$this->org_ext_sp',
      org_ext_dr = '$this->org_ext_dr',
      org_ext_tr = '$this->org_ext_tr',
      zabbix = '$this->zabbix',
-     obs_fca = '$this->obs_fca',
+     obs_mp = '$this->obs_mp',
      obs_sp = '$this->obs_sp',
      obs_dr = '$this->obs_dr',
      obs_tr = '$this->obs_tr',

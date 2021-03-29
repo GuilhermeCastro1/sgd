@@ -8,7 +8,7 @@
 //Precisa criar o controller da class Results
  $pdo = new Conexao();
  $totalCount = new Results($pdo);
- $qtdFCA = round(($totalCount->qtdAcessos("fca")/9850)*100);
+ $qtdFCA = round(($totalCount->qtdAcessos("mp")/9850)*100);
  $qtdSP = round(($totalCount->qtdAcessos("sp")/9850)*100);
  $qtdTR = round(($totalCount->qtdAcessos("tr")/9850)*100);
 
@@ -562,17 +562,17 @@ if (!$_SESSION['logon']){
 
                         <script>
 
-                            var qtdFCA = <?php echo $qtdFCA ?>;
+                            var qtdMP = <?php echo $qtdMP ?>;
                             var qtdSP = <?php echo $qtdSP ?>;
                             var qtdTR = <?php echo $qtdTR ?>;
                             
                             new Chart(document.getElementById("pie-chart"), {
                                 type: 'pie',
                                 data: {
-                                    labels: ["DC FCA", "DC Supplier Park", "Sala Técnica"],
+                                    labels: ["DC MP", "DC Supplier Park", "Sala Técnica"],
                                     datasets: [{
                                         backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"],
-                                        data: [qtdFCA, qtdSP, qtdTR]
+                                        data: [qtdMP, qtdSP, qtdTR]
                                     }]
                                 },
                                 options: {

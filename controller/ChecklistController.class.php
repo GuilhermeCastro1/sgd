@@ -51,58 +51,58 @@ class ChecklistController{
 			$data = array_reverse(explode('/', addslashes($_GET['data'])));
 			$data = implode('-', $data);
 
-			$operador_fca = addslashes($_GET['operador_fca']);
+			$operador_mp = addslashes($_GET['operador_mp']);
 			$operador_sp = addslashes($_GET['operador_sp']);
 			$operador_tr = addslashes($_GET['operador_tr']);
 			
-			$entrada_fca = addslashes($_GET['entrada_fca']);
-			$saida_fca = addslashes($_GET['saida_fca']);
+			$entrada_mp = addslashes($_GET['entrada_mp']);
+			$saida_mp = addslashes($_GET['saida_mp']);
 			$entrada_sp = addslashes($_GET['entrada_sp']);
 			$saida_sp = addslashes($_GET['saida_sp']);
 			$entrada_tr = addslashes($_GET['entrada_tr']);
 			$saida_tr = addslashes($_GET['saida_tr']);
 
-			isset($_GET['racks_fca']) ? $racks_fca = addslashes($_GET['racks_fca']) : $racks_fca = "0";
+			isset($_GET['racks_mp']) ? $racks_mp = addslashes($_GET['racks_mp']) : $racks_mp = "0";
 			isset($_GET['racks_sp']) ? $racks_sp = addslashes($_GET['racks_sp']) : $racks_sp = "0";
 			isset($_GET['racks_tr']) ? $racks_tr = addslashes($_GET['racks_tr']) : $racks_tr = "0";
 
-			isset($_GET['org_fca']) ? $org_fca = addslashes($_GET['org_fca']) : $org_fca = "0";
+			isset($_GET['org_mp']) ? $org_mp = addslashes($_GET['org_mp']) : $org_mp = "0";
 			isset($_GET['org_sp']) ? $org_sp = addslashes($_GET['org_sp']) : $org_sp = "0";
 			isset($_GET['org_tr']) ? $org_tr = addslashes($_GET['org_tr']) : $org_tr = "0";
 			
-			isset($_GET['lumin_fca']) ? $lumin_fca = addslashes($_GET['lumin_fca']) : $lumin_fca = "0";
+			isset($_GET['lumin_mp']) ? $lumin_mp = addslashes($_GET['lumin_mp']) : $lumin_mp = "0";
 			isset($_GET['lumin_sp']) ? $lumin_sp = addslashes($_GET['lumin_sp']) : $lumin_sp = "0";
 			isset($_GET['lumin_tr']) ? $lumin_tr = addslashes($_GET['lumin_tr']) : $lumin_tr = "0";
 			
-			isset($_GET['infra_fca']) ? $infra_fca = addslashes($_GET['infra_fca']) : $infra_fca = "0";
+			isset($_GET['infra_mp']) ? $infra_mp = addslashes($_GET['infra_mp']) : $infra_mp = "0";
 			isset($_GET['infra_sp']) ? $infra_sp = addslashes($_GET['infra_sp']) : $infra_sp = "0";
 			isset($_GET['infra_tr']) ? $infra_tr = addslashes($_GET['infra_tr']) : $infra_tr = "0";
 
-			isset($_GET['acesso_fca']) ? $acesso_fca = addslashes($_GET['acesso_fca']) : $acesso_fca = "0";
+			isset($_GET['acesso_mp']) ? $acesso_mp = addslashes($_GET['acesso_mp']) : $acesso_mp = "0";
 			isset($_GET['acesso_sp']) ? $acesso_sp = addslashes($_GET['acesso_sp']) : $acesso_sp = "0";
 			isset($_GET['acesso_tr']) ? $acesso_tr = addslashes($_GET['acesso_tr']) : $acesso_tr = "0";
 
-			isset($_GET['portacf_fca']) ? $portacf_fca = addslashes($_GET['portacf_fca']) : $portacf_fca = "0";	
+			isset($_GET['portacf_mp']) ? $portacf_mp = addslashes($_GET['portacf_mp']) : $portacf_mp = "0";	
 			isset($_GET['portacf_sp']) ? $portacf_sp = addslashes($_GET['portacf_sp']) : $portacf_sp = "0";	
 
-			isset($_GET['arc_fca']) ? $arc_fca = addslashes($_GET['arc_fca']) : $arc_fca = "0";
+			isset($_GET['arc_mp']) ? $arc_mp = addslashes($_GET['arc_mp']) : $arc_mp = "0";
 			isset($_GET['arc_sp']) ? $arc_sp = addslashes($_GET['arc_sp']) : $arc_sp = "0";
 			isset($_GET['arc_tr']) ? $arc_tr = addslashes($_GET['arc_tr']) : $arc_tr = "0";				
 
-			isset($_GET['sist_extint_fca']) ? $sist_extint_fca = addslashes($_GET['sist_extint_fca']) : $sist_extint_fca = "0";
+			isset($_GET['sist_extint_mp']) ? $sist_extint_mp = addslashes($_GET['sist_extint_mp']) : $sist_extint_mp = "0";
 			isset($_GET['sist_extint_sp']) ? $sist_extint_sp = addslashes($_GET['sist_extint_sp']) : $sist_extint_sp = "0";
 			isset($_GET['sist_extint_tr']) ? $sist_extint_tr = addslashes($_GET['sist_extint_tr']) : $sist_extint_tr = "0";			
 
 
-			isset($_GET['ledsaude_fca']) ? $ledsaude_fca = addslashes($_GET['ledsaude_fca']) : $ledsaude_fca = "0";
+			isset($_GET['ledsaude_mp']) ? $ledsaude_mp = addslashes($_GET['ledsaude_mp']) : $ledsaude_mp = "0";
 
-			isset($_GET['temp01_fca']) ? $temp01_fca = addslashes($_GET['temp01_fca']) : $temp01_fca = "0";
-			isset($_GET['temp02_fca']) ? $temp02_fca = addslashes($_GET['temp02_fca']) : $temp02_fca = "0";
-			isset($_GET['temp03_fca']) ? $temp03_fca = addslashes($_GET['temp03_fca']) : $temp03_fca = "0";
+			isset($_GET['temp01_mp']) ? $temp01_mp = addslashes($_GET['temp01_mp']) : $temp01_mp = "0";
+			isset($_GET['temp02_mp']) ? $temp02_mp = addslashes($_GET['temp02_mp']) : $temp02_mp = "0";
+			isset($_GET['temp03_mp']) ? $temp03_mp = addslashes($_GET['temp03_mp']) : $temp03_mp = "0";
 
-			isset($_GET['humid01_fca']) ? $humid01_fca = addslashes($_GET['humid01_fca']) : $humid01_fca = "0";
-			isset($_GET['humid02_fca']) ? $humid02_fca = addslashes($_GET['humid02_fca']) : $humid02_fca = "0";
-			isset($_GET['humid03_fca']) ? $humid03_fca = addslashes($_GET['humid03_fca']) : $humid03_fca = "0";
+			isset($_GET['humid01_mp']) ? $humid01_mp = addslashes($_GET['humid01_mp']) : $humid01_mp = "0";
+			isset($_GET['humid02_mp']) ? $humid02_mp = addslashes($_GET['humid02_mp']) : $humid02_mp = "0";
+			isset($_GET['humid03_mp']) ? $humid03_mp = addslashes($_GET['humid03_mp']) : $humid03_mp = "0";
 
 			isset($_GET['temp01_sp']) ? $temp01_sp = addslashes($_GET['temp01_sp']) : $temp01_sp = "0";
 			isset($_GET['temp02_sp']) ? $temp02_sp = addslashes($_GET['temp02_sp']) : $temp02_sp = "0";
@@ -114,20 +114,20 @@ class ChecklistController{
 
 			isset($_GET['cap_ups_tr']) ? $cap_ups_tr = addslashes($_GET['cap_ups_tr']) : $cap_ups_tr = "0";
 
-			isset($_GET['lumin_sc_fca']) ? $lumin_sc_fca = addslashes($_GET['lumin_sc_fca']) : $lumin_sc_fca = "0";
-			isset($_GET['portacf_sc_fca']) ? $portacf_sc_fca = addslashes($_GET['portacf_sc_fca']) : $portacf_sc_fca = "0";
-			isset($_GET['acesso_sc_fca']) ? $acesso_sc_fca = addslashes($_GET['acesso_sc_fca']) : $acesso_sc_fca = "0";
+			isset($_GET['lumin_sc_mp']) ? $lumin_sc_mp = addslashes($_GET['lumin_sc_mp']) : $lumin_sc_mp = "0";
+			isset($_GET['portacf_sc_mp']) ? $portacf_sc_mp = addslashes($_GET['portacf_sc_mp']) : $portacf_sc_mp = "0";
+			isset($_GET['acesso_sc_mp']) ? $acesso_sc_mp = addslashes($_GET['acesso_sc_mp']) : $acesso_sc_mp = "0";
 
-			isset($_GET['geradores_fca']) ? $geradores_fca = addslashes($_GET['geradores_fca']) : $geradores_fca = "0";
+			isset($_GET['geradores_mp']) ? $geradores_mp = addslashes($_GET['geradores_mp']) : $geradores_mp = "0";
 			isset($_GET['geradores_sp']) ? $geradores_sp = addslashes($_GET['geradores_sp']) : $geradores_sp = "0";
 
-			isset($_GET['org_ext_fca']) ? $org_ext_fca = addslashes($_GET['org_ext_fca']) : $org_ext_fca = "0";
+			isset($_GET['org_ext_mp']) ? $org_ext_mp = addslashes($_GET['org_ext_mp']) : $org_ext_mp = "0";
 			isset($_GET['org_ext_sp']) ? $org_ext_sp = addslashes($_GET['org_ext_sp']) : $org_ext_sp = "0";
 			isset($_GET['org_ext_tr']) ? $org_ext_tr = addslashes($_GET['org_ext_tr']) : $org_ext_tr = "0";
 
 			isset($_GET['zabbix']) ? $zabbix = addslashes($_GET['zabbix']) : $zabbix = "0";
 
-			isset($_GET['obs_fca']) ? $obs_fca = addslashes($_GET['obs_fca']) : $obs_fca = "0";
+			isset($_GET['obs_mp']) ? $obs_mp = addslashes($_GET['obs_mp']) : $obs_mp = "0";
 			isset($_GET['obs_sp']) ? $obs_sp = addslashes($_GET['obs_sp']) : $obs_sp = "0";
 			isset($_GET['obs_tr']) ? $obs_tr = addslashes($_GET['obs_tr']) : $obs_tr = "0";
 
@@ -165,17 +165,17 @@ class ChecklistController{
 			$pdo = new Conexao();
 			$checklist = new Checklist($pdo);
 
-			$checklist->insertCheck($turno, $data, $operador_fca, $operador_sp, $operador_tr, $entrada_fca,
-                                $saida_fca, $entrada_sp, $saida_sp, $entrada_tr, $saida_tr, $racks_fca,
-                                $racks_sp, $racks_tr, $org_fca, $org_sp, $org_tr, $lumin_fca, $lumin_sp,
-                                $lumin_tr, $infra_fca, $infra_sp, $infra_tr, $acesso_fca, $acesso_sp,
-                                $acesso_tr, $portacf_fca, $portacf_sp, $arc_fca, $arc_sp, $arc_tr,
-                                $sist_extint_fca, $sist_extint_sp, $sist_extint_tr, $ledsaude_fca,
-                                $temp01_fca, $humid01_fca, $temp01_sp, $humid01_sp, $temp02_fca,
-                                $humid02_fca, $temp02_sp, $humid02_sp, $temp03_fca, $humid03_fca,
-                                $temp03_sp, $humid03_sp, $cap_ups_tr, $lumin_sc_fca, $portacf_sc_fca,
-                                $acesso_sc_fca, $geradores_fca, $geradores_sp, $org_ext_fca, $org_ext_sp,
-                                $org_ext_tr, $zabbix, $obs_fca, $obs_sp, $obs_tr, $chk_carro, $chk_sala,
+			$checklist->insertCheck($turno, $data, $operador_mp, $operador_sp, $operador_tr, $entrada_mp,
+                                $saida_mp, $entrada_sp, $saida_sp, $entrada_tr, $saida_tr, $racks_mp,
+                                $racks_sp, $racks_tr, $org_mp, $org_sp, $org_tr, $lumin_mp, $lumin_sp,
+                                $lumin_tr, $infra_mp, $infra_sp, $infra_tr, $acesso_mp, $acesso_sp,
+                                $acesso_tr, $portacf_mp, $portacf_sp, $arc_mp, $arc_sp, $arc_tr,
+                                $sist_extint_mp, $sist_extint_sp, $sist_extint_tr, $ledsaude_mp,
+                                $temp01_mp, $humid01_mp, $temp01_sp, $humid01_sp, $temp02_mp,
+                                $humid02_mp, $temp02_sp, $humid02_sp, $temp03_mp, $humid03_mp,
+                                $temp03_sp, $humid03_sp, $cap_ups_tr, $lumin_sc_mp, $portacf_sc_mp,
+                                $acesso_sc_mp, $geradores_mp, $geradores_sp, $org_ext_mp, $org_ext_sp,
+                                $org_ext_tr, $zabbix, $obs_mp, $obs_sp, $obs_tr, $chk_carro, $chk_sala,
 								$chk_not, $chk_cel, $chk_batcel, $obs_npo, 
 								$operador_dr, $entrada_dr, $saida_dr, $racks_dr, $org_dr, $lumin_dr, $infra_dr, 
 								$acesso_dr, $portacf_dr, $arc_dr, $sist_extint_dr, $ledsaude_dr, $temp_dr,
@@ -212,7 +212,7 @@ class ChecklistController{
 							<!--<th>ID</th>-->
 							<th style="min-width:50px">Data</th>
 							<th style="min-width:50px">Turno</th>
-							<th style="min-width:180px">OBS DC FCA</th>
+							<th style="min-width:180px">OBS DC MP</th>
 							<th style="min-width:180px">OBS DC SP</th>
 							<th style="min-width:180px">OBS DC DR</th>
 							<th style="min-width:180px">OBS Sala Técnica</th>
@@ -238,7 +238,7 @@ class ChecklistController{
 								<ol style="line-height:15px">
 									<?php
 
-										$result = explode(';', $chk['obs_fca']);
+										$result = explode(';', $chk['obs_mp']);
 										foreach ($result as $value) {
 											echo "<li>" . $value . "</li>";
 										}
@@ -376,7 +376,7 @@ class ChecklistController{
 							<th>ID</th>
 							<th>Data</th>
 							<th>Turno</th>
-							<th>OBS DC FCA</th>
+							<th>OBS DC MP</th>
 							<th>OBS DC SP</th>
 							<th>OBS Sala Técnica</th>
 							<th>OBS NPO</th>
@@ -401,7 +401,7 @@ class ChecklistController{
 								<ul style="line-height:15px">
 									<?php
 
-										$result = explode(';', $chk['obs_fca']);
+										$result = explode(';', $chk['obs_mp']);
 										foreach ($result as $value) {
 											echo "<li>" . $value . "</li>";
 										}
@@ -486,58 +486,58 @@ class ChecklistController{
 			$data = array_reverse(explode('/', addslashes($_GET['data'])));
 			$data = implode('-', $data);
 
-			$operador_fca = addslashes($_GET['operador_fca']);
+			$operador_mp = addslashes($_GET['operador_mp']);
 			$operador_sp = addslashes($_GET['operador_sp']);
 			$operador_tr = addslashes($_GET['operador_tr']);
 			
-			$entrada_fca = addslashes($_GET['entrada_fca']);
-			$saida_fca = addslashes($_GET['saida_fca']);
+			$entrada_mp = addslashes($_GET['entrada_mp']);
+			$saida_mp = addslashes($_GET['saida_mp']);
 			$entrada_sp = addslashes($_GET['entrada_sp']);
 			$saida_sp = addslashes($_GET['saida_sp']);
 			$entrada_tr = addslashes($_GET['entrada_tr']);
 			$saida_tr = addslashes($_GET['saida_tr']);
 
-			isset($_GET['racks_fca']) ? $racks_fca = addslashes($_GET['racks_fca']) : $racks_fca = "0";
+			isset($_GET['racks_mp']) ? $racks_mp = addslashes($_GET['racks_mp']) : $racks_mp = "0";
 			isset($_GET['racks_sp']) ? $racks_sp = addslashes($_GET['racks_sp']) : $racks_sp = "0";
 			isset($_GET['racks_tr']) ? $racks_tr = addslashes($_GET['racks_tr']) : $racks_tr = "0";
 
-			isset($_GET['org_fca']) ? $org_fca = addslashes($_GET['org_fca']) : $org_fca = "0";
+			isset($_GET['org_mp']) ? $org_mp = addslashes($_GET['org_mp']) : $org_mp = "0";
 			isset($_GET['org_sp']) ? $org_sp = addslashes($_GET['org_sp']) : $org_sp = "0";
 			isset($_GET['org_tr']) ? $org_tr = addslashes($_GET['org_tr']) : $org_tr = "0";
 			
-			isset($_GET['lumin_fca']) ? $lumin_fca = addslashes($_GET['lumin_fca']) : $lumin_fca = "0";
+			isset($_GET['lumin_mp']) ? $lumin_mp = addslashes($_GET['lumin_mp']) : $lumin_mp = "0";
 			isset($_GET['lumin_sp']) ? $lumin_sp = addslashes($_GET['lumin_sp']) : $lumin_sp = "0";
 			isset($_GET['lumin_tr']) ? $lumin_tr = addslashes($_GET['lumin_tr']) : $lumin_tr = "0";
 			
-			isset($_GET['infra_fca']) ? $infra_fca = addslashes($_GET['infra_fca']) : $infra_fca = "0";
+			isset($_GET['infra_mp']) ? $infra_mp = addslashes($_GET['infra_mp']) : $infra_mp = "0";
 			isset($_GET['infra_sp']) ? $infra_sp = addslashes($_GET['infra_sp']) : $infra_sp = "0";
 			isset($_GET['infra_tr']) ? $infra_tr = addslashes($_GET['infra_tr']) : $infra_tr = "0";
 
-			isset($_GET['acesso_fca']) ? $acesso_fca = addslashes($_GET['acesso_fca']) : $acesso_fca = "0";
+			isset($_GET['acesso_mp']) ? $acesso_mp = addslashes($_GET['acesso_mp']) : $acesso_mp = "0";
 			isset($_GET['acesso_sp']) ? $acesso_sp = addslashes($_GET['acesso_sp']) : $acesso_sp = "0";
 			isset($_GET['acesso_tr']) ? $acesso_tr = addslashes($_GET['acesso_tr']) : $acesso_tr = "0";
 
-			isset($_GET['portacf_fca']) ? $portacf_fca = addslashes($_GET['portacf_fca']) : $portacf_fca = "0";	
+			isset($_GET['portacf_mp']) ? $portacf_mp = addslashes($_GET['portacf_mp']) : $portacf_mp = "0";	
 			isset($_GET['portacf_sp']) ? $portacf_sp = addslashes($_GET['portacf_sp']) : $portacf_sp = "0";	
 
-			isset($_GET['arc_fca']) ? $arc_fca = addslashes($_GET['arc_fca']) : $arc_fca = "0";
+			isset($_GET['arc_mp']) ? $arc_mp = addslashes($_GET['arc_mp']) : $arc_mp = "0";
 			isset($_GET['arc_sp']) ? $arc_sp = addslashes($_GET['arc_sp']) : $arc_sp = "0";
 			isset($_GET['arc_tr']) ? $arc_tr = addslashes($_GET['arc_tr']) : $arc_tr = "0";				
 
-			isset($_GET['sist_extint_fca']) ? $sist_extint_fca = addslashes($_GET['sist_extint_fca']) : $sist_extint_fca = "0";
+			isset($_GET['sist_extint_mp']) ? $sist_extint_mp = addslashes($_GET['sist_extint_mp']) : $sist_extint_mp = "0";
 			isset($_GET['sist_extint_sp']) ? $sist_extint_sp = addslashes($_GET['sist_extint_sp']) : $sist_extint_sp = "0";
 			isset($_GET['sist_extint_tr']) ? $sist_extint_tr = addslashes($_GET['sist_extint_tr']) : $sist_extint_tr = "0";			
 
 
-			isset($_GET['ledsaude_fca']) ? $ledsaude_fca = addslashes($_GET['ledsaude_fca']) : $ledsaude_fca = "0";
+			isset($_GET['ledsaude_mp']) ? $ledsaude_mp = addslashes($_GET['ledsaude_mp']) : $ledsaude_mp = "0";
 
-			isset($_GET['temp01_fca']) ? $temp01_fca = addslashes($_GET['temp01_fca']) : $temp01_fca = "0";
-			isset($_GET['temp02_fca']) ? $temp02_fca = addslashes($_GET['temp02_fca']) : $temp02_fca = "0";
-			isset($_GET['temp03_fca']) ? $temp03_fca = addslashes($_GET['temp03_fca']) : $temp03_fca = "0";
+			isset($_GET['temp01_mp']) ? $temp01_mp = addslashes($_GET['temp01_mp']) : $temp01_mp = "0";
+			isset($_GET['temp02_mp']) ? $temp02_mp = addslashes($_GET['temp02_mp']) : $temp02_mp = "0";
+			isset($_GET['temp03_mp']) ? $temp03_mp = addslashes($_GET['temp03_mp']) : $temp03_mp = "0";
 
-			isset($_GET['humid01_fca']) ? $humid01_fca = addslashes($_GET['humid01_fca']) : $humid01_fca = "0";
-			isset($_GET['humid02_fca']) ? $humid02_fca = addslashes($_GET['humid02_fca']) : $humid02_fca = "0";
-			isset($_GET['humid03_fca']) ? $humid03_fca = addslashes($_GET['humid03_fca']) : $humid03_fca = "0";
+			isset($_GET['humid01_mp']) ? $humid01_mp = addslashes($_GET['humid01_mp']) : $humid01_mp = "0";
+			isset($_GET['humid02_mp']) ? $humid02_mp = addslashes($_GET['humid02_mp']) : $humid02_mp = "0";
+			isset($_GET['humid03_mp']) ? $humid03_mp = addslashes($_GET['humid03_mp']) : $humid03_mp = "0";
 
 			isset($_GET['temp01_sp']) ? $temp01_sp = addslashes($_GET['temp01_sp']) : $temp01_sp = "0";
 			isset($_GET['temp02_sp']) ? $temp02_sp = addslashes($_GET['temp02_sp']) : $temp02_sp = "0";
@@ -549,20 +549,20 @@ class ChecklistController{
 
 			isset($_GET['cap_ups_tr']) ? $cap_ups_tr = addslashes($_GET['cap_ups_tr']) : $cap_ups_tr = "0";
 
-			isset($_GET['lumin_sc_fca']) ? $lumin_sc_fca = addslashes($_GET['lumin_sc_fca']) : $lumin_sc_fca = "0";
-			isset($_GET['portacf_sc_fca']) ? $portacf_sc_fca = addslashes($_GET['portacf_sc_fca']) : $portacf_sc_fca = "0";
-			isset($_GET['acesso_sc_fca']) ? $acesso_sc_fca = addslashes($_GET['acesso_sc_fca']) : $acesso_sc_fca = "0";
+			isset($_GET['lumin_sc_mp']) ? $lumin_sc_mp = addslashes($_GET['lumin_sc_mp']) : $lumin_sc_mp = "0";
+			isset($_GET['portacf_sc_mp']) ? $portacf_sc_mp = addslashes($_GET['portacf_sc_mp']) : $portacf_sc_mp = "0";
+			isset($_GET['acesso_sc_mp']) ? $acesso_sc_mp = addslashes($_GET['acesso_sc_mp']) : $acesso_sc_mp = "0";
 
-			isset($_GET['geradores_fca']) ? $geradores_fca = addslashes($_GET['geradores_fca']) : $geradores_fca = "0";
+			isset($_GET['geradores_mp']) ? $geradores_mp = addslashes($_GET['geradores_mp']) : $geradores_mp = "0";
 			isset($_GET['geradores_sp']) ? $geradores_sp = addslashes($_GET['geradores_sp']) : $geradores_sp = "0";
 
-			isset($_GET['org_ext_fca']) ? $org_ext_fca = addslashes($_GET['org_ext_fca']) : $org_ext_fca = "0";
+			isset($_GET['org_ext_mp']) ? $org_ext_mp = addslashes($_GET['org_ext_mp']) : $org_ext_mp = "0";
 			isset($_GET['org_ext_sp']) ? $org_ext_sp = addslashes($_GET['org_ext_sp']) : $org_ext_sp = "0";
 			isset($_GET['org_ext_tr']) ? $org_ext_tr = addslashes($_GET['org_ext_tr']) : $org_ext_tr = "0";
 
 			isset($_GET['zabbix']) ? $zabbix = addslashes($_GET['zabbix']) : $zabbix = "0";
 
-			isset($_GET['obs_fca']) ? $obs_fca = addslashes($_GET['obs_fca']) : $obs_fca = "0";
+			isset($_GET['obs_mp']) ? $obs_mp = addslashes($_GET['obs_mp']) : $obs_mp = "0";
 			isset($_GET['obs_sp']) ? $obs_sp = addslashes($_GET['obs_sp']) : $obs_sp = "0";
 			isset($_GET['obs_tr']) ? $obs_tr = addslashes($_GET['obs_tr']) : $obs_tr = "0";
 
@@ -596,17 +596,17 @@ class ChecklistController{
 			$pdo = new Conexao();
 			$checklist = new Checklist($pdo);
 
-			$checklist->editCheck($i, $turno, $data, $operador_fca, $operador_sp, $operador_tr, $entrada_fca,
-                                $saida_fca, $entrada_sp, $saida_sp, $entrada_tr, $saida_tr, $racks_fca,
-                                $racks_sp, $racks_tr, $org_fca, $org_sp, $org_tr, $lumin_fca, $lumin_sp,
-                                $lumin_tr, $infra_fca, $infra_sp, $infra_tr, $acesso_fca, $acesso_sp,
-                                $acesso_tr, $portacf_fca, $portacf_sp, $arc_fca, $arc_sp, $arc_tr,
-                                $sist_extint_fca, $sist_extint_sp, $sist_extint_tr, $ledsaude_fca,
-                                $temp01_fca, $humid01_fca, $temp01_sp, $humid01_sp, $temp02_fca,
-                                $humid02_fca, $temp02_sp, $humid02_sp, $temp03_fca, $humid03_fca,
-                                $temp03_sp, $humid03_sp, $cap_ups_tr, $lumin_sc_fca, $portacf_sc_fca,
-                                $acesso_sc_fca, $geradores_fca, $geradores_sp, $org_ext_fca, $org_ext_sp,
-                                $org_ext_tr, $zabbix, $obs_fca, $obs_sp, $obs_tr, $chk_carro, $chk_sala,
+			$checklist->editCheck($i, $turno, $data, $operador_mp, $operador_sp, $operador_tr, $entrada_mp,
+                                $saida_mp, $entrada_sp, $saida_sp, $entrada_tr, $saida_tr, $racks_mp,
+                                $racks_sp, $racks_tr, $org_mp, $org_sp, $org_tr, $lumin_mp, $lumin_sp,
+                                $lumin_tr, $infra_mp, $infra_sp, $infra_tr, $acesso_mp, $acesso_sp,
+                                $acesso_tr, $portacf_mp, $portacf_sp, $arc_mp, $arc_sp, $arc_tr,
+                                $sist_extint_mp, $sist_extint_sp, $sist_extint_tr, $ledsaude_mp,
+                                $temp01_mp, $humid01_mp, $temp01_sp, $humid01_sp, $temp02_mp,
+                                $humid02_mp, $temp02_sp, $humid02_sp, $temp03_mp, $humid03_mp,
+                                $temp03_sp, $humid03_sp, $cap_ups_tr, $lumin_sc_mp, $portacf_sc_mp,
+                                $acesso_sc_mp, $geradores_mp, $geradores_sp, $org_ext_mp, $org_ext_sp,
+                                $org_ext_tr, $zabbix, $obs_mp, $obs_sp, $obs_tr, $chk_carro, $chk_sala,
 								$chk_not, $chk_cel, $chk_batcel, $obs_npo,
 								$operador_dr, $entrada_dr, $saida_dr, $racks_dr, $org_dr, $lumin_dr, $infra_dr, 
 								$acesso_dr, $portacf_dr, $arc_dr, $sist_extint_dr, $ledsaude_dr, $temp_dr,

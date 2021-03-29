@@ -46,7 +46,7 @@ class Results{
 
 
 //$totalCount = new Results($pdo);
-//echo $qtdfca = $totalCount->qtdAcessos("fca");
+//echo $qtdmp = $totalCount->qtdAcessos("mp");
 //echo "<br>";
 //echo $qtdsp = $totalCount->qtdAcessos("sp");
 //echo "<br>";
