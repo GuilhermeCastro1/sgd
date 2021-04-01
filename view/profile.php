@@ -212,7 +212,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                                                                 <div class="row row_form_user">
                                                                                                     <div class="col-md-4" style="float: left">
                                                                                                         <label for="dt_nasc"><h6>Data de nascimento</h6></label>
-                                                                                                        <input type="date" class="form-control form-control-sm" name="dt_nasc" id="dt_nasc" value="<?= isset($user['dt_nasc']) ? $user['dt_nasc'] : '' ?>" disabled required>
+                                                                                                        <input type="date" class="form-control form-control-sm" name="dt_nasc" id="dt_nasc" style="padding: 2px !important;" value="<?= isset($user['dt_nasc']) ? $user['dt_nasc'] : '' ?>" disabled required>
                                                                                                     </div>
                                                                                                     <div class="col-md-8" style="float: right">
                                                                                                         <label for="func"><h6>Função</h6></label>
